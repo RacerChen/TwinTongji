@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UI_tools.h"
 
 @interface RegisterVC : UIViewController
 
