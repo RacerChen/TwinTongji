@@ -9,5 +9,12 @@
 
 @interface RegisterVC : UIViewController
 
+@property(strong, nonatomic) IBOutlet UITextField *textfield_mailnum;
+@property(strong, nonatomic) IBOutlet UITextField *textfeild_password;
+@property(strong, nonatomic) IBOutlet UITextField *textfeild_password_again;
+@property(strong, nonatomic) IBOutlet UITextField *textfeild_verifyCode;
+
+-(IBAction) btn_sendVerifyCode;
+-(IBAction) btn_register;
 
 @end
