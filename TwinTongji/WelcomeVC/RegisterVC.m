@@ -33,21 +33,20 @@
 
 -(IBAction) btn_register
 {
-    if([self isValidateEmail:textfield_mailnum.text] && [self check2password:textfeild_password.text and:textfeild_password_again.text] && [self isValidateVerifyCode:textfeild_verifyCode.text])
+    if([self isValidateEmail:textfield_mailnum.text]
+       && [self check2password:textfeild_password.text and:textfeild_password_again.text]
+       && [self isValidateVerifyCode:textfeild_verifyCode.text])
     {
         RegisterStatusCode statusCode = RIG_SUCCESS; // Get from backend
         NSArray *register_status = [NSArray arrayWithObjects:@"注册成功", @"验证码错误，注册失败", @"网络不佳，注册失败", nil];
+        ClickDoFunction cf;
         if(statusCode == RIG_SUCCESS)
-        {
-            ClickDoFunction cf = ^void(){
+            cf = ^void(){
                 [self.navigationController popViewControllerAnimated:false];
                 };
-            [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:register_status[statusCode] clickDoFunction:cf] animated:true completion:nil];
-        }
         else
-        {
-            [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:register_status[statusCode] clickDoFunction:nil] animated:true completion:nil];
-        }
+            cf = nil;
+        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:register_status[statusCode] clickDoFunction:cf] animated:true completion:nil];
     }
 }
 
