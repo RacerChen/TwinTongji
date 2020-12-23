@@ -29,12 +29,12 @@
     [self.view endEditing:YES]; // Dismiss keyboard
     if([textField_Lg_ID.text isEqualToString:@""])
     {
-        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:@"请输入账号"] animated:false completion:nil];
+        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:@"请输入账号" clickDoFunction:nil] animated:true completion:nil];
         return;
     }
     if([textField_lg_password.text isEqualToString:@""])
     {
-        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:@"请输入密码"] animated:false completion:nil];
+        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:@"请输入密码" clickDoFunction:nil] animated:true completion:nil];
         return;
     }
     LoginStatusCode statusCode = LOGIN_FAIL_WRONG_NUM; // Get from backend, init for test
@@ -50,11 +50,10 @@
     }
     else
     {
-        NSArray *login_status = [NSArray arrayWithObjects:@"注册成功", @"用户名或密码错误，请重新登录", @"网络不佳，登录失败", nil];
-        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:login_status[statusCode]] animated:true completion:nil];
+        NSArray *login_status = [NSArray arrayWithObjects:@"登录成功", @"用户名或密码错误，请重新登录", @"网络不佳，登录失败", nil];
+        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:login_status[statusCode] clickDoFunction:nil] animated:true completion:nil];
         return;
     }
-    
 }
 
 -(IBAction) btn_register

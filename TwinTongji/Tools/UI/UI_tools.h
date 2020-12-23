@@ -7,11 +7,12 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^ClickDoFunction)(void);
+
 @interface UI_tools : NSObject
 
 // NavigatorController show detail of a view controller in Storyboard by its' ID
 +(void) navigator:(UINavigationController *) NC showDetailOf: (NSString *) VC_id inStoryBoard: (NSString *) storyboardName;
 // Show an alert with title and message(content)
-+(UIAlertController *) alert_withName: (NSString *) title andMessage: (NSString *) message;
-
++(UIAlertController *) alert_withName: (NSString *) title andMessage: (NSString *) message clickDoFunction: (ClickDoFunction) clickFunc;
 @end

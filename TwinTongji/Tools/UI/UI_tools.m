@@ -22,13 +22,15 @@
     [NC showDetailViewController:VC sender:nil];
 }
 
-+(UIAlertController *) alert_withName: (NSString *) title andMessage: (NSString *) message
++(UIAlertController *) alert_withName: (NSString *) title andMessage: (NSString *) message clickDoFunction: (ClickDoFunction) clickFunc
 {
     //初始化提示框；
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle: UIAlertControllerStyleAlert];
     
     [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         //点击按钮的响应事件；
+        if(clickFunc != nil)
+            clickFunc();
     }]];
     return alert;
 }

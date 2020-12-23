@@ -33,12 +33,21 @@
 
 -(IBAction) btn_register
 {
-    if([self check2password:textfeild_password.text and:textfeild_password_again.text] && [self isValidateEmail:textfield_mailnum.text] && [self isValidateVerifyCode:textfeild_verifyCode.text])
+    if([self isValidateEmail:textfield_mailnum.text] && [self check2password:textfeild_password.text and:textfeild_password_again.text] && [self isValidateVerifyCode:textfeild_verifyCode.text])
     {
         RegisterStatusCode statusCode = RIG_SUCCESS; // Get from backend
         NSArray *register_status = [NSArray arrayWithObjects:@"注册成功", @"验证码错误，注册失败", @"网络不佳，注册失败", nil];
-        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:register_status[statusCode]] animated:false completion:nil];
-        
+        if(statusCode == RIG_SUCCESS)
+        {
+            ClickDoFunction cf = ^void(){
+                [self.navigationController popViewControllerAnimated:false];
+                };
+            [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:register_status[statusCode] clickDoFunction:cf] animated:true completion:nil];
+        }
+        else
+        {
+            [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:register_status[statusCode] clickDoFunction:nil] animated:true completion:nil];
+        }
     }
 }
 
@@ -47,12 +56,12 @@
     BOOL password_correct = true;
     if([password isEqualToString:@""] || [passwordAgain isEqual:@""])
     {
-        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:@"请填写两次密码"] animated:false completion:nil];
+        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:@"请填写两次密码" clickDoFunction:nil] animated:true completion:nil];
         password_correct = false;
     }
     else if(![password isEqualToString:passwordAgain])
     {
-        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:@"两次密码输入不一致，请检查"] animated:false completion:nil];
+        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:@"两次密码输入不一致，请检查" clickDoFunction:nil] animated:true completion:nil];
         password_correct = false;
     }
     return password_correct;
@@ -66,7 +75,7 @@
     bool valid = [emailTest evaluateWithObject:email];
     if(!valid)
     {
-        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:@"请检查邮箱是否输入正确\n4位数字"] animated:false completion:nil];
+        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:@"请检查邮箱是否输入正确" clickDoFunction:nil] animated:true completion:nil];
     }
     return valid;
 }
@@ -79,7 +88,7 @@
     bool valid = [verifyCodeTest evaluateWithObject:verifyCode];
     if(!valid)
     {
-        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:@"请检查验证码是否输入正确"] animated:false completion:nil];
+        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:@"请检查验证码是否输入正确(4位数字)" clickDoFunction:nil] animated:true completion:nil];
     }
     return valid;
 }
