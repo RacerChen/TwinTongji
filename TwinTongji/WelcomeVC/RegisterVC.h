@@ -5,8 +5,9 @@
 //  Created by 陈嘉捷 on 2020/12/23.
 //
 
-#ifndef RegisterVC_h
-#define RegisterVC_h
+#import <UIKit/UIKit.h>
+
+@interface RegisterVC : UIViewController
 
 
-#endif /* RegisterVC_h */
+@end
