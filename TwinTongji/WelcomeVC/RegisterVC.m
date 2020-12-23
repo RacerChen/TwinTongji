@@ -33,7 +33,7 @@
 
 -(IBAction) btn_register
 {
-    if([self check2password:textfeild_password.text and:textfeild_password_again.text] && [self isValidateEmail:textfield_mailnum.text])
+    if([self check2password:textfeild_password.text and:textfeild_password_again.text] && [self isValidateEmail:textfield_mailnum.text] && [self isValidateVerifyCode:textfeild_verifyCode.text])
     {
         RegisterStatusCode statusCode = RIG_SUCCESS; // Get from backend
         NSArray *register_status = [NSArray arrayWithObjects:@"注册成功", @"验证码错误，注册失败", @"网络不佳，注册失败", nil];
@@ -44,16 +44,18 @@
 
 -(BOOL) check2password:(NSString *) password and:(NSString *) passwordAgain
 {
-    if([password isEqualToString:passwordAgain])
+    BOOL password_correct = true;
+    if([password isEqualToString:@""] || [passwordAgain isEqual:@""])
     {
-        return true;
+        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:@"请填写两次密码"] animated:false completion:nil];
+        password_correct = false;
     }
-    else
+    else if(![password isEqualToString:passwordAgain])
     {
-        NSString *returnCode = @"两次密码输入不一致，请检查";
-        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:returnCode] animated:false completion:nil];
-        return false;
+        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:@"两次密码输入不一致，请检查"] animated:false completion:nil];
+        password_correct = false;
     }
+    return password_correct;
 }
 
 -(BOOL)isValidateEmail:(NSString *)email
@@ -64,10 +66,23 @@
     bool valid = [emailTest evaluateWithObject:email];
     if(!valid)
     {
-        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:@"请检查邮箱是否输入正确"] animated:false completion:nil];
+        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:@"请检查邮箱是否输入正确\n4位数字"] animated:false completion:nil];
     }
     return valid;
-
 }
+
+-(BOOL)isValidateVerifyCode:(NSString *)verifyCode
+{
+
+    NSString *verifyCodeRegex = @"[0-9]{4}";
+    NSPredicate *verifyCodeTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", verifyCodeRegex];
+    bool valid = [verifyCodeTest evaluateWithObject:verifyCode];
+    if(!valid)
+    {
+        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:@"请检查验证码是否输入正确"] animated:false completion:nil];
+    }
+    return valid;
+}
+
 
 @end
