@@ -8,6 +8,13 @@
 #import <UIKit/UIKit.h>
 #import "UI_tools.h"
 
+typedef enum _LoginStatusCode
+{
+    LOGIN_SUCCESS = 0,
+    LOGIN_FAIL_WRONG_NUM = 1,
+    LOGIN_FAIL_NETWORK = 2
+} LoginStatusCode;
+
 @interface LoginVC : UIViewController
 
 @property(strong, nonatomic) IBOutlet UITextField *textField_Lg_ID;
