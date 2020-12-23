@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		342BCE2F2590344C00E5222F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCE2E2590344C00E5222F /* AppDelegate.m */; };
 		342BCE322590344C00E5222F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCE312590344C00E5222F /* SceneDelegate.m */; };
-		342BCE352590344C00E5222F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCE342590344C00E5222F /* ViewController.m */; };
+		342BCE352590344C00E5222F /* TabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCE342590344C00E5222F /* TabVC.m */; };
 		342BCE382590344C00E5222F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 342BCE362590344C00E5222F /* Main.storyboard */; };
 		342BCE3B2590344C00E5222F /* TwinTongji.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 342BCE392590344C00E5222F /* TwinTongji.xcdatamodeld */; };
 		342BCE3D2590344E00E5222F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 342BCE3C2590344E00E5222F /* Assets.xcassets */; };
@@ -17,6 +17,16 @@
 		342BCE432590344E00E5222F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCE422590344E00E5222F /* main.m */; };
 		342BCE4D2590344E00E5222F /* TwinTongjiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCE4C2590344E00E5222F /* TwinTongjiTests.m */; };
 		342BCE582590344E00E5222F /* TwinTongjiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCE572590344E00E5222F /* TwinTongjiUITests.m */; };
+		342BCE992591F3C300E5222F /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCE982591F3C300E5222F /* LoginVC.m */; };
+		342BCE9A2591F3C300E5222F /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCE982591F3C300E5222F /* LoginVC.m */; };
+		342BCE9B2591F3C300E5222F /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCE982591F3C300E5222F /* LoginVC.m */; };
+		342BCEAF2593186C00E5222F /* ProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCEAE2593186C00E5222F /* ProfileVC.m */; };
+		342BCEB02593186C00E5222F /* ProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCEAE2593186C00E5222F /* ProfileVC.m */; };
+		342BCEB12593186C00E5222F /* ProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCEAE2593186C00E5222F /* ProfileVC.m */; };
+		342BCEBA259318B400E5222F /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCEB9259318B400E5222F /* RegisterVC.m */; };
+		342BCEBB259318B400E5222F /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCEB9259318B400E5222F /* RegisterVC.m */; };
+		342BCEBC259318B400E5222F /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCEB9259318B400E5222F /* RegisterVC.m */; };
+		342BCEE72593255B00E5222F /* UI_tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCEC72593192D00E5222F /* UI_tools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +52,8 @@
 		342BCE2E2590344C00E5222F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		342BCE302590344C00E5222F /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		342BCE312590344C00E5222F /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		342BCE332590344C00E5222F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		342BCE342590344C00E5222F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		342BCE332590344C00E5222F /* TabVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabVC.h; sourceTree = "<group>"; };
+		342BCE342590344C00E5222F /* TabVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabVC.m; sourceTree = "<group>"; };
 		342BCE372590344C00E5222F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		342BCE3A2590344C00E5222F /* TwinTongji.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TwinTongji.xcdatamodel; sourceTree = "<group>"; };
 		342BCE3C2590344E00E5222F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,6 +66,14 @@
 		342BCE532590344E00E5222F /* TwinTongjiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwinTongjiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		342BCE572590344E00E5222F /* TwinTongjiUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwinTongjiUITests.m; sourceTree = "<group>"; };
 		342BCE592590344E00E5222F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		342BCE982591F3C300E5222F /* LoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		342BCE9F2591F3D300E5222F /* LoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		342BCEAD259317FB00E5222F /* ProfileVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileVC.h; sourceTree = "<group>"; };
+		342BCEAE2593186C00E5222F /* ProfileVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileVC.m; sourceTree = "<group>"; };
+		342BCEB8259318A500E5222F /* RegisterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
+		342BCEB9259318B400E5222F /* RegisterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
+		342BCEC62593192200E5222F /* UI_tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UI_tools.h; sourceTree = "<group>"; };
+		342BCEC72593192D00E5222F /* UI_tools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UI_tools.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,12 +124,14 @@
 		342BCE2C2590344C00E5222F /* TwinTongji */ = {
 			isa = PBXGroup;
 			children = (
+				342BCEC3259318F100E5222F /* Tools */,
+				342BCEAC259317E700E5222F /* TabVC */,
+				342BCE7E25918AB300E5222F /* WelcomeVC */,
+				342BCE682591877F00E5222F /* VC */,
 				342BCE2D2590344C00E5222F /* AppDelegate.h */,
 				342BCE2E2590344C00E5222F /* AppDelegate.m */,
 				342BCE302590344C00E5222F /* SceneDelegate.h */,
 				342BCE312590344C00E5222F /* SceneDelegate.m */,
-				342BCE332590344C00E5222F /* ViewController.h */,
-				342BCE342590344C00E5222F /* ViewController.m */,
 				342BCE362590344C00E5222F /* Main.storyboard */,
 				342BCE3C2590344E00E5222F /* Assets.xcassets */,
 				342BCE3E2590344E00E5222F /* LaunchScreen.storyboard */,
@@ -138,6 +158,52 @@
 				342BCE592590344E00E5222F /* Info.plist */,
 			);
 			path = TwinTongjiUITests;
+			sourceTree = "<group>";
+		};
+		342BCE682591877F00E5222F /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				342BCE332590344C00E5222F /* TabVC.h */,
+				342BCE342590344C00E5222F /* TabVC.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		342BCE7E25918AB300E5222F /* WelcomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				342BCE982591F3C300E5222F /* LoginVC.m */,
+				342BCE9F2591F3D300E5222F /* LoginVC.h */,
+				342BCEB8259318A500E5222F /* RegisterVC.h */,
+				342BCEB9259318B400E5222F /* RegisterVC.m */,
+			);
+			path = WelcomeVC;
+			sourceTree = "<group>";
+		};
+		342BCEAC259317E700E5222F /* TabVC */ = {
+			isa = PBXGroup;
+			children = (
+				342BCEAD259317FB00E5222F /* ProfileVC.h */,
+				342BCEAE2593186C00E5222F /* ProfileVC.m */,
+			);
+			path = TabVC;
+			sourceTree = "<group>";
+		};
+		342BCEC3259318F100E5222F /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				342BCEC52593190C00E5222F /* UI */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		342BCEC52593190C00E5222F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				342BCEC62593192200E5222F /* UI_tools.h */,
+				342BCEC72593192D00E5222F /* UI_tools.m */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,11 +335,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				342BCEAF2593186C00E5222F /* ProfileVC.m in Sources */,
 				342BCE432590344E00E5222F /* main.m in Sources */,
 				342BCE3B2590344C00E5222F /* TwinTongji.xcdatamodeld in Sources */,
-				342BCE352590344C00E5222F /* ViewController.m in Sources */,
+				342BCE992591F3C300E5222F /* LoginVC.m in Sources */,
+				342BCE352590344C00E5222F /* TabVC.m in Sources */,
+				342BCEBA259318B400E5222F /* RegisterVC.m in Sources */,
 				342BCE2F2590344C00E5222F /* AppDelegate.m in Sources */,
 				342BCE322590344C00E5222F /* SceneDelegate.m in Sources */,
+				342BCEE72593255B00E5222F /* UI_tools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +351,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				342BCE9A2591F3C300E5222F /* LoginVC.m in Sources */,
+				342BCEBB259318B400E5222F /* RegisterVC.m in Sources */,
+				342BCEB02593186C00E5222F /* ProfileVC.m in Sources */,
 				342BCE4D2590344E00E5222F /* TwinTongjiTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +362,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				342BCE9B2591F3C300E5222F /* LoginVC.m in Sources */,
+				342BCEBC259318B400E5222F /* RegisterVC.m in Sources */,
+				342BCEB12593186C00E5222F /* ProfileVC.m in Sources */,
 				342BCE582590344E00E5222F /* TwinTongjiUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,6 +522,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J9BS8VTJP3;
 				INFOPLIST_FILE = TwinTongji/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -463,6 +540,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J9BS8VTJP3;
 				INFOPLIST_FILE = TwinTongji/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -1,17 +1,17 @@
 //
-//  ViewController.m
+//  ProfileVC.m
 //  TwinTongji
 //
-//  Created by 陈嘉捷 on 2020/12/21.
+//  Created by 陈嘉捷 on 2020/12/23.
 //
 
-#import "TabVC.h"
+#import "ProfileVC.h"
 
-@interface TabVC ()
+@interface ProfileVC ()
 
 @end
 
-@implementation TabVC
+@implementation ProfileVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
