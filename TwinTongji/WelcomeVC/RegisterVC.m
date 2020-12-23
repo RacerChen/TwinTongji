@@ -25,12 +25,21 @@
 
 -(IBAction) btn_sendVerifyCode
 {
-    
+    if([self isValidateEmail:textfield_mailnum.text])
+    {
+        NSLog(@"Verify Code sended!");
+    }
 }
 
 -(IBAction) btn_register
 {
-    
+    if([self check2password:textfeild_password.text and:textfeild_password_again.text] && [self isValidateEmail:textfield_mailnum.text])
+    {
+        RegisterStatusCode statusCode = RIG_SUCCESS; // Get from backend
+        NSArray *register_status = [NSArray arrayWithObjects:@"注册成功", @"验证码错误，注册失败", @"网络不佳，注册失败", nil];
+        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:register_status[statusCode]] animated:false completion:nil];
+        
+    }
 }
 
 -(BOOL) check2password:(NSString *) password and:(NSString *) passwordAgain
@@ -45,6 +54,20 @@
         [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:returnCode] animated:false completion:nil];
         return false;
     }
+}
+
+-(BOOL)isValidateEmail:(NSString *)email
+{
+
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    bool valid = [emailTest evaluateWithObject:email];
+    if(!valid)
+    {
+        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:@"请检查邮箱是否输入正确"] animated:false completion:nil];
+    }
+    return valid;
+
 }
 
 @end

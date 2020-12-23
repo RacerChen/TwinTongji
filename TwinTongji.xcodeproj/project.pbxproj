@@ -74,6 +74,7 @@
 		342BCEB9259318B400E5222F /* RegisterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
 		342BCEC62593192200E5222F /* UI_tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UI_tools.h; sourceTree = "<group>"; };
 		342BCEC72593192D00E5222F /* UI_tools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UI_tools.m; sourceTree = "<group>"; };
+		342BCEF325934DE000E5222F /* cmd_git.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = cmd_git.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +139,7 @@
 				342BCE412590344E00E5222F /* Info.plist */,
 				342BCE422590344E00E5222F /* main.m */,
 				342BCE392590344C00E5222F /* TwinTongji.xcdatamodeld */,
+				342BCEF325934DE000E5222F /* cmd_git.md */,
 			);
 			path = TwinTongji;
 			sourceTree = "<group>";
