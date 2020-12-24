@@ -27,6 +27,9 @@
 		342BCEBB259318B400E5222F /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCEB9259318B400E5222F /* RegisterVC.m */; };
 		342BCEBC259318B400E5222F /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCEB9259318B400E5222F /* RegisterVC.m */; };
 		342BCEE72593255B00E5222F /* UI_tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCEC72593192D00E5222F /* UI_tools.m */; };
+		40B6BF62F1B6E5B51D24CC1C /* Pods_TwinTongji_TwinTongjiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5216FE386E2EE55233FFA34C /* Pods_TwinTongji_TwinTongjiUITests.framework */; };
+		5D367E4DC228006997F05AFD /* Pods_TwinTongji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9F3CF2FEBED64B0316B671 /* Pods_TwinTongji.framework */; };
+		E8BB31D1DEBB087A53A2EA47 /* Pods_TwinTongjiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A05A9BC7339686139457AFF /* Pods_TwinTongjiTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A05A9BC7339686139457AFF /* Pods_TwinTongjiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwinTongjiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		342BCE2A2590344C00E5222F /* TwinTongji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwinTongji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		342BCE2D2590344C00E5222F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		342BCE2E2590344C00E5222F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -75,6 +79,14 @@
 		342BCEC62593192200E5222F /* UI_tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UI_tools.h; sourceTree = "<group>"; };
 		342BCEC72593192D00E5222F /* UI_tools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UI_tools.m; sourceTree = "<group>"; };
 		342BCEF325934DE000E5222F /* cmd_git.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = cmd_git.md; sourceTree = "<group>"; };
+		3A9F3CF2FEBED64B0316B671 /* Pods_TwinTongji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwinTongji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5001739C9F89FC2ADBA69BD6 /* Pods-TwinTongji.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwinTongji.release.xcconfig"; path = "Target Support Files/Pods-TwinTongji/Pods-TwinTongji.release.xcconfig"; sourceTree = "<group>"; };
+		51DC34E0468BE85CD1642940 /* Pods-TwinTongji-TwinTongjiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwinTongji-TwinTongjiUITests.release.xcconfig"; path = "Target Support Files/Pods-TwinTongji-TwinTongjiUITests/Pods-TwinTongji-TwinTongjiUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5216FE386E2EE55233FFA34C /* Pods_TwinTongji_TwinTongjiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwinTongji_TwinTongjiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BD1C0A2789A899C81DB0F6B /* Pods-TwinTongji-TwinTongjiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwinTongji-TwinTongjiUITests.debug.xcconfig"; path = "Target Support Files/Pods-TwinTongji-TwinTongjiUITests/Pods-TwinTongji-TwinTongjiUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B64FB54E2AD0BC107944774F /* Pods-TwinTongjiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwinTongjiTests.release.xcconfig"; path = "Target Support Files/Pods-TwinTongjiTests/Pods-TwinTongjiTests.release.xcconfig"; sourceTree = "<group>"; };
+		EC86178D8EA6360E05CF9953 /* Pods-TwinTongjiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwinTongjiTests.debug.xcconfig"; path = "Target Support Files/Pods-TwinTongjiTests/Pods-TwinTongjiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ECB8258A536E7D6BF03FAA06 /* Pods-TwinTongji.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwinTongji.debug.xcconfig"; path = "Target Support Files/Pods-TwinTongji/Pods-TwinTongji.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D367E4DC228006997F05AFD /* Pods_TwinTongji.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8BB31D1DEBB087A53A2EA47 /* Pods_TwinTongjiTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,12 +110,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40B6BF62F1B6E5B51D24CC1C /* Pods_TwinTongji_TwinTongjiUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		336028BC13AC87AB564200F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A9F3CF2FEBED64B0316B671 /* Pods_TwinTongji.framework */,
+				5216FE386E2EE55233FFA34C /* Pods_TwinTongji_TwinTongjiUITests.framework */,
+				1A05A9BC7339686139457AFF /* Pods_TwinTongjiTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		342BCE212590344C00E5222F = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +134,8 @@
 				342BCE4B2590344E00E5222F /* TwinTongjiTests */,
 				342BCE562590344E00E5222F /* TwinTongjiUITests */,
 				342BCE2B2590344C00E5222F /* Products */,
+				87FF6B897C34C1D73F6FF448 /* Pods */,
+				336028BC13AC87AB564200F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -208,6 +235,20 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		87FF6B897C34C1D73F6FF448 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ECB8258A536E7D6BF03FAA06 /* Pods-TwinTongji.debug.xcconfig */,
+				5001739C9F89FC2ADBA69BD6 /* Pods-TwinTongji.release.xcconfig */,
+				7BD1C0A2789A899C81DB0F6B /* Pods-TwinTongji-TwinTongjiUITests.debug.xcconfig */,
+				51DC34E0468BE85CD1642940 /* Pods-TwinTongji-TwinTongjiUITests.release.xcconfig */,
+				EC86178D8EA6360E05CF9953 /* Pods-TwinTongjiTests.debug.xcconfig */,
+				B64FB54E2AD0BC107944774F /* Pods-TwinTongjiTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -215,9 +256,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 342BCE5C2590344E00E5222F /* Build configuration list for PBXNativeTarget "TwinTongji" */;
 			buildPhases = (
+				3B73E076F014B30FAA201E31 /* [CP] Check Pods Manifest.lock */,
 				342BCE262590344C00E5222F /* Sources */,
 				342BCE272590344C00E5222F /* Frameworks */,
 				342BCE282590344C00E5222F /* Resources */,
+				3FDE5B8F88E2C65C36EB01AF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +275,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 342BCE5F2590344E00E5222F /* Build configuration list for PBXNativeTarget "TwinTongjiTests" */;
 			buildPhases = (
+				A5274136D7A6A3FF6CAB9137 /* [CP] Check Pods Manifest.lock */,
 				342BCE442590344E00E5222F /* Sources */,
 				342BCE452590344E00E5222F /* Frameworks */,
 				342BCE462590344E00E5222F /* Resources */,
@@ -250,9 +294,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 342BCE622590344E00E5222F /* Build configuration list for PBXNativeTarget "TwinTongjiUITests" */;
 			buildPhases = (
+				ABED439B0A177DFEE852F75F /* [CP] Check Pods Manifest.lock */,
 				342BCE4F2590344E00E5222F /* Sources */,
 				342BCE502590344E00E5222F /* Frameworks */,
 				342BCE512590344E00E5222F /* Resources */,
+				46FC4A6829610E60078AC17A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -331,6 +377,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B73E076F014B30FAA201E31 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TwinTongji-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FDE5B8F88E2C65C36EB01AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TwinTongji/Pods-TwinTongji-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TwinTongji/Pods-TwinTongji-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TwinTongji/Pods-TwinTongji-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46FC4A6829610E60078AC17A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TwinTongji-TwinTongjiUITests/Pods-TwinTongji-TwinTongjiUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TwinTongji-TwinTongjiUITests/Pods-TwinTongji-TwinTongjiUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TwinTongji-TwinTongjiUITests/Pods-TwinTongji-TwinTongjiUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5274136D7A6A3FF6CAB9137 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TwinTongjiTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABED439B0A177DFEE852F75F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TwinTongji-TwinTongjiUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		342BCE262590344C00E5222F /* Sources */ = {
@@ -520,6 +669,7 @@
 		};
 		342BCE5D2590344E00E5222F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECB8258A536E7D6BF03FAA06 /* Pods-TwinTongji.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -538,6 +688,7 @@
 		};
 		342BCE5E2590344E00E5222F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5001739C9F89FC2ADBA69BD6 /* Pods-TwinTongji.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -556,6 +707,7 @@
 		};
 		342BCE602590344E00E5222F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC86178D8EA6360E05CF9953 /* Pods-TwinTongjiTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -575,6 +727,7 @@
 		};
 		342BCE612590344E00E5222F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B64FB54E2AD0BC107944774F /* Pods-TwinTongjiTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -594,6 +747,7 @@
 		};
 		342BCE632590344E00E5222F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BD1C0A2789A899C81DB0F6B /* Pods-TwinTongji-TwinTongjiUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TwinTongjiUITests/Info.plist;
@@ -611,6 +765,7 @@
 		};
 		342BCE642590344E00E5222F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51DC34E0468BE85CD1642940 /* Pods-TwinTongji-TwinTongjiUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TwinTongjiUITests/Info.plist;
