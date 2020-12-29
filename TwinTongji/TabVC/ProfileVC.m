@@ -14,12 +14,12 @@
 @implementation ProfileVC
 
 @synthesize imgview_portrait;
-@synthesize cycerView_photos;
+@synthesize view_contain_scollview;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    [self init_cycleScrollView];
+    [self init_cycleScrollView];
     [self init_portrait:@"portrait.jpg"];
 }
 
@@ -30,21 +30,26 @@
 
 -(void) init_cycleScrollView
 {
-    NSArray *img_arr = [NSArray arrayWithObjects:[UIImage imageNamed:@"scroll_img_1.jpg"], [UIImage imageNamed:@"scroll_img_2.jpg"], [UIImage imageNamed:@"scroll_img_3.jpg"], nil];
-    self.cycerView_photos = [SDCycleScrollView cycleScrollViewWithFrame:CGRectZero
-                                                                delegate:self
-                                                        placeholderImage:[UIImage imageNamed:@"tabbar_icon0_normal"]];
-            
-    self.cycerView_photos.localizationImageNamesGroup = img_arr;
-    self.cycerView_photos.autoScrollTimeInterval = 5.;// 自动滚动时间间隔
-    self.cycerView_photos.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;// 翻页 右下角
-    self.cycerView_photos.titleLabelBackgroundColor = [UIColor clearColor];// 图片对应的标题的 背景色。（因为没有设标题）
+    NSArray *img_arr = [NSArray arrayWithObjects:@"scroll_img_1.jpg", @"scroll_img_2.jpg", @"portrait.jpg", nil];
+    // 本地加载 --- 创建不带标题的图片轮播器[same size and position with view_contain_scollview]
+    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(view_contain_scollview.frame.origin.x, view_contain_scollview.frame.origin.y - UI_TOOLS_NAVI_BAR_HEIGTH, view_contain_scollview.frame.size.width, view_contain_scollview.frame.size.height) shouldInfiniteLoop:YES imageNamesGroup:img_arr];
+    cycleScrollView.delegate = self;
+    cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleAnimated;
+    cycleScrollView.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    [view_contain_scollview addSubview:cycleScrollView];
 }
 
 -(void) init_portrait: (NSString *) imageName
 {
     imgview_portrait.image = [UIImage imageNamed:imageName];
-    imgview_portrait.layer.cornerRadius = imgview_portrait.frame.size.height / 5;
+    imgview_portrait.layer.cornerRadius = UI_TOOLS_CORNER_RADIUS;
+}
+
+#pragma mark - SDCycleScrollViewDelegate
+
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
+{
+    NSLog(@"---点击了第%ld张图片", (long)index);
 }
 
 @end

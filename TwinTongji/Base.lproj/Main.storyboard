@@ -158,8 +158,8 @@
                                     <action selector="btn_click_imgview_portrait" destination="eh5-Na-Omv" eventType="touchUpInside" id="rqC-KB-PIH"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cWH-sX-SxM" customClass="SDCycleScrollView">
-                                <rect key="frame" x="0.0" y="88" width="390" height="181"/>
+                            <view contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cWH-sX-SxM">
+                                <rect key="frame" x="0.0" y="88" width="390" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                             </view>
@@ -186,8 +186,8 @@
                     <tabBarItem key="tabBarItem" title="个人信息" image="person" catalog="system" id="aNE-9P-ju9"/>
                     <navigationItem key="navigationItem" title="个人信息" id="cnT-7s-Bx1"/>
                     <connections>
-                        <outlet property="cycerView_photos" destination="cWH-sX-SxM" id="40I-5U-Cus"/>
                         <outlet property="imgview_portrait" destination="gZV-U2-HQs" id="Njx-H1-eXo"/>
+                        <outlet property="view_contain_scollview" destination="cWH-sX-SxM" id="SMG-lO-Jju"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Rl-Lh-9DE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -218,12 +218,6 @@
                     <view key="view" contentMode="scaleToFill" id="RtW-NH-t4v">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ocW-6F-Q8M">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Jwj-2d-I3F"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>

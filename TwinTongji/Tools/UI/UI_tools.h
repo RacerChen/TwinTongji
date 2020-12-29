@@ -7,6 +7,9 @@
 
 #import <UIKit/UIKit.h>
 
+#define UI_TOOLS_CORNER_RADIUS 20
+#define UI_TOOLS_NAVI_BAR_HEIGTH 88
+
 typedef void(^ClickDoFunction)(void);
 
 @interface UI_tools : NSObject
