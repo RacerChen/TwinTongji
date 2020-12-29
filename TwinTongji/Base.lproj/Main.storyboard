@@ -113,6 +113,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boS-x0-Wh1">
+                                <rect key="frame" x="241" y="714" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="退出登录"/>
+                                <connections>
+                                    <segue destination="jLm-F8-B4g" kind="presentation" modalPresentationStyle="fullScreen" id="1Gw-cG-fmZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlF-Co-C2n">
+                                <rect key="frame" x="88" y="714" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="修改密码"/>
+                                <connections>
+                                    <segue destination="TaV-ux-F7I" kind="show" id="QPI-LS-Kh0"/>
+                                </connections>
+                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.fill.viewfinder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gZV-U2-HQs">
                                 <rect key="frame" x="16" y="287" width="108" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -163,22 +179,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boS-x0-Wh1">
-                                <rect key="frame" x="241" y="714" width="62" height="30"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="female_index" translatesAutoresizingMaskIntoConstraints="NO" id="Fkq-TG-2iC">
+                                <rect key="frame" x="101" y="370" width="23" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="退出登录"/>
-                                <connections>
-                                    <segue destination="jLm-F8-B4g" kind="presentation" modalPresentationStyle="fullScreen" id="1Gw-cG-fmZ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlF-Co-C2n">
-                                <rect key="frame" x="88" y="714" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="修改密码"/>
-                                <connections>
-                                    <segue destination="TaV-ux-F7I" kind="show" id="QPI-LS-Kh0"/>
-                                </connections>
-                            </button>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3Qr-1C-2ia"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -186,6 +190,7 @@
                     <tabBarItem key="tabBarItem" title="个人信息" image="person" catalog="system" id="aNE-9P-ju9"/>
                     <navigationItem key="navigationItem" title="个人信息" id="cnT-7s-Bx1"/>
                     <connections>
+                        <outlet property="imgview_gender_index" destination="Fkq-TG-2iC" id="ogD-YG-wgA"/>
                         <outlet property="imgview_portrait" destination="gZV-U2-HQs" id="Njx-H1-eXo"/>
                         <outlet property="view_contain_scollview" destination="cWH-sX-SxM" id="SMG-lO-Jju"/>
                     </connections>
@@ -361,6 +366,7 @@
         <segue reference="QPI-LS-Kh0"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="female_index" width="207" height="337"/>
         <image name="message" catalog="system" width="128" height="113"/>
         <image name="paperplane" catalog="system" width="128" height="118"/>
         <image name="person" catalog="system" width="128" height="117"/>

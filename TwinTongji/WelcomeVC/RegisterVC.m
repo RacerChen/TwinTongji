@@ -13,10 +13,7 @@
 
 @implementation RegisterVC
 
-@synthesize textfield_mailnum;
-@synthesize textfeild_password;
-@synthesize textfeild_password_again;
-@synthesize textfeild_verifyCode;
+@synthesize textfield_mailnum, textfeild_password, textfeild_password_again, textfeild_verifyCode;
 
 - (void)viewDidLoad {
     [super viewDidLoad];

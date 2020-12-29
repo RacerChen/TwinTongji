@@ -13,8 +13,7 @@
 
 @implementation LoginVC
 
-@synthesize textField_Lg_ID;
-@synthesize textField_lg_password;
+@synthesize textField_Lg_ID, textField_lg_password;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,6 +36,7 @@
         [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:@"请输入密码" clickDoFunction:nil] animated:true completion:nil];
         return;
     }
+    
     LoginStatusCode statusCode = LOGIN_FAIL_WRONG_NUM; // Get from backend, init for test
     if ([textField_Lg_ID.text isEqualToString: @"cjj"] && [textField_lg_password.text isEqualToString: @"cjj"] )
     {

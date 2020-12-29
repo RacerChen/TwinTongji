@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,6 +27,7 @@
 		342BCEBB259318B400E5222F /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCEB9259318B400E5222F /* RegisterVC.m */; };
 		342BCEBC259318B400E5222F /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCEB9259318B400E5222F /* RegisterVC.m */; };
 		342BCEE72593255B00E5222F /* UI_tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCEC72593192D00E5222F /* UI_tools.m */; };
+		342BCF15259B3F3200E5222F /* ZJImageMagnification.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCF14259B3F3100E5222F /* ZJImageMagnification.m */; };
 		40B6BF62F1B6E5B51D24CC1C /* Pods_TwinTongji_TwinTongjiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5216FE386E2EE55233FFA34C /* Pods_TwinTongji_TwinTongjiUITests.framework */; };
 		5D367E4DC228006997F05AFD /* Pods_TwinTongji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9F3CF2FEBED64B0316B671 /* Pods_TwinTongji.framework */; };
 		E8BB31D1DEBB087A53A2EA47 /* Pods_TwinTongjiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A05A9BC7339686139457AFF /* Pods_TwinTongjiTests.framework */; };
@@ -79,6 +80,8 @@
 		342BCEC62593192200E5222F /* UI_tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UI_tools.h; sourceTree = "<group>"; };
 		342BCEC72593192D00E5222F /* UI_tools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UI_tools.m; sourceTree = "<group>"; };
 		342BCEF325934DE000E5222F /* cmd_git.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = cmd_git.md; sourceTree = "<group>"; };
+		342BCF13259B3F2200E5222F /* ZJImageMagnification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJImageMagnification.h; sourceTree = "<group>"; };
+		342BCF14259B3F3100E5222F /* ZJImageMagnification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJImageMagnification.m; sourceTree = "<group>"; };
 		3A9F3CF2FEBED64B0316B671 /* Pods_TwinTongji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwinTongji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5001739C9F89FC2ADBA69BD6 /* Pods-TwinTongji.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwinTongji.release.xcconfig"; path = "Target Support Files/Pods-TwinTongji/Pods-TwinTongji.release.xcconfig"; sourceTree = "<group>"; };
 		51DC34E0468BE85CD1642940 /* Pods-TwinTongji-TwinTongjiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwinTongji-TwinTongjiUITests.release.xcconfig"; path = "Target Support Files/Pods-TwinTongji-TwinTongjiUITests/Pods-TwinTongji-TwinTongjiUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -221,6 +224,7 @@
 		342BCEC3259318F100E5222F /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				342BCF12259B3F0300E5222F /* ThirdPartUI */,
 				342BCEC52593190C00E5222F /* UI */,
 			);
 			path = Tools;
@@ -235,6 +239,15 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		342BCF12259B3F0300E5222F /* ThirdPartUI */ = {
+			isa = PBXGroup;
+			children = (
+				342BCF13259B3F2200E5222F /* ZJImageMagnification.h */,
+				342BCF14259B3F3100E5222F /* ZJImageMagnification.m */,
+			);
+			path = ThirdPartUI;
+			sourceTree = "<group>";
+		};
 		87FF6B897C34C1D73F6FF448 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,7 +258,6 @@
 				EC86178D8EA6360E05CF9953 /* Pods-TwinTongjiTests.debug.xcconfig */,
 				B64FB54E2AD0BC107944774F /* Pods-TwinTongjiTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -495,6 +507,7 @@
 				342BCE2F2590344C00E5222F /* AppDelegate.m in Sources */,
 				342BCE322590344C00E5222F /* SceneDelegate.m in Sources */,
 				342BCEE72593255B00E5222F /* UI_tools.m in Sources */,
+				342BCF15259B3F3200E5222F /* ZJImageMagnification.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
