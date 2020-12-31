@@ -7,13 +7,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UI_tools.h"
-
-typedef enum _LoginStatusCode
-{
-    LOGIN_SUCCESS = 0,
-    LOGIN_FAIL_WRONG_NUM = 1,
-    LOGIN_FAIL_NETWORK = 2
-} LoginStatusCode;
+#import "LoginApi.h"
 
 @interface LoginVC : UIViewController
 

@@ -12,12 +12,16 @@
 @end
 
 @implementation RegisterVC
+{
+    RegisterApi *curRegisterApi;
+}
 
 @synthesize textfield_mailnum, textfeild_password, textfeild_password_again, textfeild_verifyCode;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    curRegisterApi = [[RegisterApi alloc] init];
 }
 
 -(IBAction) btn_sendVerifyCode
@@ -25,6 +29,19 @@
     if([self isValidateEmail:textfield_mailnum.text])
     {
         NSLog(@"Verify Code sended!");
+        [curRegisterApi requestVerifyCode:textfield_mailnum.text];
+        if(![curRegisterApi.verify_return_code isEqualToString:@"wrong"])
+        {
+            [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:@"验证码已经发送到您的邮箱，请查验" clickDoFunction:nil] animated:true completion:nil];
+        }
+        else
+        {
+            [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:@"验证码发送失败，请重试" clickDoFunction:nil] animated:true completion:nil];
+        }
+    }
+    else
+    {
+        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:@"请输入正确的邮箱号" clickDoFunction:nil] animated:true completion:nil];
     }
 }
 
@@ -34,8 +51,9 @@
        && [self check2password:textfeild_password.text and:textfeild_password_again.text]
        && [self isValidateVerifyCode:textfeild_verifyCode.text])
     {
-        RegisterStatusCode statusCode = RIG_SUCCESS; // Get from backend
-        NSArray *register_status = [NSArray arrayWithObjects:@"注册成功", @"验证码错误，注册失败", @"网络不佳，注册失败", nil];
+        [curRegisterApi registerWithEmail:textfield_mailnum.text andPassword:textfeild_password.text andVerifyCode:textfeild_verifyCode.text]; // Get from backend
+        RegisterStatusCode statusCode = curRegisterApi.register_return_code;
+        NSArray *register_status = [NSArray arrayWithObjects: @"网络不佳，注册失败", @"验证码错误，注册失败", @"注册成功", nil];
         ClickDoFunction cf;
         if(statusCode == RIG_SUCCESS)
             cf = ^void(){
@@ -85,8 +103,18 @@
     if(!valid)
     {
         [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:@"请检查验证码是否输入正确(4位数字)" clickDoFunction:nil] animated:true completion:nil];
+        return false;
+    } // Format check
+    
+    if([textfeild_verifyCode.text isEqualToString:curRegisterApi.verify_return_code]) // Value check
+    {
+        return true;
     }
-    return valid;
+    else
+    {
+        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:@"请检查验证码不匹配" clickDoFunction:nil] animated:true completion:nil];
+        return false;
+    }
 }
 
 

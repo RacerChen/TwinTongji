@@ -7,13 +7,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UI_tools.h"
-
-typedef enum _RegisterStatusCode
-{
-    RIG_SUCCESS = 0,
-    RIG_WRONG_CODE = 1,
-    RIG_FAIL_NETWORK = 2
-} RegisterStatusCode;
+#import "RegisterApi.h"
 
 @interface RegisterVC : UIViewController
 

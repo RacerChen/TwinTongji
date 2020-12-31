@@ -12,6 +12,9 @@
 @end
 
 @implementation LoginVC
+{
+    LoginApi* curLoginApi;
+}
 
 @synthesize textField_Lg_ID, textField_lg_password;
 
@@ -20,6 +23,18 @@
     // Do any additional setup after loading the view.
     textField_Lg_ID.delegate = self;
     textField_lg_password.delegate = self;
+    
+    // Test Login JSON
+//    NSString *response = @"{\"return_code\" : 1}";
+//    NSData *response_data =[response dataUsingEncoding:NSUTF8StringEncoding];
+//    NSDictionary *return_json_dic = [NSJSONSerialization JSONObjectWithData:response_data
+//                                                            options:NSJSONReadingMutableContainers
+//                                                              error:nil];
+//    NSLog(@"Return Code: %d", [[return_json_dic objectForKey:@"return_code"] intValue]);
+    
+    curLoginApi = [[LoginApi alloc] init];
+    
+    
 }
 
 
@@ -37,7 +52,9 @@
         return;
     }
     
-    LoginStatusCode statusCode = LOGIN_FAIL_WRONG_NUM; // Get from backend, init for test
+    [curLoginApi login_request:textField_Lg_ID.text password:textField_lg_password.text];
+    LoginStatusCode statusCode = curLoginApi.return_code; // Get from backend, init for test
+    NSLog(@"!!!!!!!!%d", statusCode);
     if ([textField_Lg_ID.text isEqualToString: @"cjj"] && [textField_lg_password.text isEqualToString: @"cjj"] )
     {
         NSLog(@"Login: ID:%@ and password:%@. Successfully", textField_Lg_ID.text, textField_lg_password.text);
@@ -50,7 +67,7 @@
     }
     else
     {
-        NSArray *login_status = [NSArray arrayWithObjects:@"登录成功", @"用户名或密码错误，请重新登录", @"网络不佳，登录失败", nil];
+        NSArray *login_status = [NSArray arrayWithObjects:@"网络不佳，登录失败", @"用户名或密码错误，请重新登录", @"登录成功", nil];
         [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:login_status[statusCode] clickDoFunction:nil] animated:true completion:nil];
         return;
     }
@@ -71,7 +88,7 @@
 }
 
 //当用户按下空白处，keyboard消失
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [self.view endEditing:YES];
 }
