@@ -31,8 +31,9 @@
 		342BCF1C259CAD2600E5222F /* LoginApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCF1B259CAD2600E5222F /* LoginApi.m */; };
 		342BCF2D259D671800E5222F /* RegisterApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCF2C259D671800E5222F /* RegisterApi.m */; };
 		342BCF37259D69C900E5222F /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCF36259D69C900E5222F /* NSString+MD5.m */; };
+		342BCFB725A5D60900E5222F /* TwinTongji.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCFB625A5D60900E5222F /* TwinTongji.m */; };
 		40B6BF62F1B6E5B51D24CC1C /* Pods_TwinTongji_TwinTongjiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5216FE386E2EE55233FFA34C /* Pods_TwinTongji_TwinTongjiUITests.framework */; };
-		5D367E4DC228006997F05AFD /* Pods_TwinTongji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9F3CF2FEBED64B0316B671 /* Pods_TwinTongji.framework */; };
+		C8564F65B3957DC54815E0A7 /* Pods_TwinTongji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9F3CF2FEBED64B0316B671 /* Pods_TwinTongji.framework */; };
 		E8BB31D1DEBB087A53A2EA47 /* Pods_TwinTongjiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A05A9BC7339686139457AFF /* Pods_TwinTongjiTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,12 +86,14 @@
 		342BCEF325934DE000E5222F /* cmd_git.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = cmd_git.md; sourceTree = "<group>"; };
 		342BCF13259B3F2200E5222F /* ZJImageMagnification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJImageMagnification.h; sourceTree = "<group>"; };
 		342BCF14259B3F3100E5222F /* ZJImageMagnification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJImageMagnification.m; sourceTree = "<group>"; };
-		342BCF1A259CAD1400E5222F /* LoginApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginApi.h; sourceTree = "<group>"; };
 		342BCF1B259CAD2600E5222F /* LoginApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginApi.m; sourceTree = "<group>"; };
 		342BCF2B259D670A00E5222F /* RegisterApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterApi.h; sourceTree = "<group>"; };
 		342BCF2C259D671800E5222F /* RegisterApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterApi.m; sourceTree = "<group>"; };
 		342BCF35259D69C900E5222F /* NSString+MD5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		342BCF36259D69C900E5222F /* NSString+MD5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		342BCFA425A5D1C200E5222F /* LoginApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginApi.h; sourceTree = "<group>"; };
+		342BCFB525A5D5FC00E5222F /* TwinTongji.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwinTongji.h; sourceTree = "<group>"; };
+		342BCFB625A5D60900E5222F /* TwinTongji.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwinTongji.m; sourceTree = "<group>"; };
 		3A9F3CF2FEBED64B0316B671 /* Pods_TwinTongji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwinTongji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5001739C9F89FC2ADBA69BD6 /* Pods-TwinTongji.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwinTongji.release.xcconfig"; path = "Target Support Files/Pods-TwinTongji/Pods-TwinTongji.release.xcconfig"; sourceTree = "<group>"; };
 		51DC34E0468BE85CD1642940 /* Pods-TwinTongji-TwinTongjiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwinTongji-TwinTongjiUITests.release.xcconfig"; path = "Target Support Files/Pods-TwinTongji-TwinTongjiUITests/Pods-TwinTongji-TwinTongjiUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D367E4DC228006997F05AFD /* Pods_TwinTongji.framework in Frameworks */,
+				C8564F65B3957DC54815E0A7 /* Pods_TwinTongji.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +231,8 @@
 			children = (
 				342BCEAD259317FB00E5222F /* ProfileVC.h */,
 				342BCEAE2593186C00E5222F /* ProfileVC.m */,
+				342BCFB525A5D5FC00E5222F /* TwinTongji.h */,
+				342BCFB625A5D60900E5222F /* TwinTongji.m */,
 			);
 			path = TabVC;
 			sourceTree = "<group>";
@@ -262,7 +267,7 @@
 		342BCF19259CAC4800E5222F /* RequestBackendUtil */ = {
 			isa = PBXGroup;
 			children = (
-				342BCF1A259CAD1400E5222F /* LoginApi.h */,
+				342BCFA425A5D1C200E5222F /* LoginApi.h */,
 				342BCF1B259CAD2600E5222F /* LoginApi.m */,
 				342BCF2B259D670A00E5222F /* RegisterApi.h */,
 				342BCF2C259D671800E5222F /* RegisterApi.m */,
@@ -304,6 +309,7 @@
 				342BCE272590344C00E5222F /* Frameworks */,
 				342BCE282590344C00E5222F /* Resources */,
 				3FDE5B8F88E2C65C36EB01AF /* [CP] Embed Pods Frameworks */,
+				2C22CBE12E7F805E5FB31157 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -342,6 +348,7 @@
 				342BCE502590344E00E5222F /* Frameworks */,
 				342BCE512590344E00E5222F /* Resources */,
 				46FC4A6829610E60078AC17A /* [CP] Embed Pods Frameworks */,
+				E13314CAC48E7315615B53D0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -422,6 +429,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2C22CBE12E7F805E5FB31157 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TwinTongji/Pods-TwinTongji-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TwinTongji/Pods-TwinTongji-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TwinTongji/Pods-TwinTongji-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3B73E076F014B30FAA201E31 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -522,6 +546,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E13314CAC48E7315615B53D0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TwinTongji-TwinTongjiUITests/Pods-TwinTongji-TwinTongjiUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TwinTongji-TwinTongjiUITests/Pods-TwinTongji-TwinTongjiUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TwinTongji-TwinTongjiUITests/Pods-TwinTongji-TwinTongjiUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -535,6 +576,7 @@
 				342BCF2D259D671800E5222F /* RegisterApi.m in Sources */,
 				342BCE992591F3C300E5222F /* LoginVC.m in Sources */,
 				342BCE352590344C00E5222F /* TabVC.m in Sources */,
+				342BCFB725A5D60900E5222F /* TwinTongji.m in Sources */,
 				342BCEBA259318B400E5222F /* RegisterVC.m in Sources */,
 				342BCF37259D69C900E5222F /* NSString+MD5.m in Sources */,
 				342BCE2F2590344C00E5222F /* AppDelegate.m in Sources */,

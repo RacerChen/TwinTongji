@@ -1,0 +1,40 @@
+PODS:
+  - AMapFoundation-NO-IDFA (1.6.5.1)
+  - AMapLocation-NO-IDFA (2.6.7):
+    - AMapFoundation-NO-IDFA (~> 1.6.4)
+  - AMapNavi-NO-IDFA (7.8.0):
+    - AMapFoundation-NO-IDFA (~> 1.6.5)
+  - AMapSearch-NO-IDFA (7.8.0):
+    - AMapFoundation-NO-IDFA (~> 1.6.4)
+  - SDCycleScrollView (1.82):
+    - SDWebImage (>= 5.0.0)
+  - SDWebImage (5.10.2):
+    - SDWebImage/Core (= 5.10.2)
+  - SDWebImage/Core (5.10.2)
+
+DEPENDENCIES:
+  - AMapLocation-NO-IDFA
+  - AMapNavi-NO-IDFA
+  - AMapSearch-NO-IDFA
+  - SDCycleScrollView (>= 1.82)
+
+SPEC REPOS:
+  trunk:
+    - AMapFoundation-NO-IDFA
+    - AMapLocation-NO-IDFA
+    - AMapNavi-NO-IDFA
+    - AMapSearch-NO-IDFA
+    - SDCycleScrollView
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  AMapFoundation-NO-IDFA: 0cf5f6c6de2725bcd868ed5aa756d12bc1a8f463
+  AMapLocation-NO-IDFA: 2a3edfee336b38481b892e1ecc85df0f6b365851
+  AMapNavi-NO-IDFA: 849ff24f59bbc55463a381ba3bbf04982b33aaa4
+  AMapSearch-NO-IDFA: 1ae997ebbd0eef87c7d240ed926eb5de51a2652d
+  SDCycleScrollView: a0d74c3384caa72bdfc81470bdbc8c14b3e1fbcf
+  SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
+
+PODFILE CHECKSUM: dbcaad18d55cba967e10065492b7b8c9a0e78d2c
+
+COCOAPODS: 1.10.0
