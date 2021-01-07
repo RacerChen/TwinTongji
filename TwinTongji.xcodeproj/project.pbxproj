@@ -33,6 +33,8 @@
 		342BCF37259D69C900E5222F /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCF36259D69C900E5222F /* NSString+MD5.m */; };
 		342BCFB725A5D60900E5222F /* TwinTongji.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCFB625A5D60900E5222F /* TwinTongji.m */; };
 		342BCFF425A6DE4E00E5222F /* FirstSegVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCFF325A6DE4E00E5222F /* FirstSegVC.m */; };
+		342BCFFD25A6F7C300E5222F /* SecondSegVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCFFC25A6F7C300E5222F /* SecondSegVC.m */; };
+		342BD00625A6F92000E5222F /* PostVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BD00525A6F92000E5222F /* PostVC.m */; };
 		40B6BF62F1B6E5B51D24CC1C /* Pods_TwinTongji_TwinTongjiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5216FE386E2EE55233FFA34C /* Pods_TwinTongji_TwinTongjiUITests.framework */; };
 		C8564F65B3957DC54815E0A7 /* Pods_TwinTongji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9F3CF2FEBED64B0316B671 /* Pods_TwinTongji.framework */; };
 		E8BB31D1DEBB087A53A2EA47 /* Pods_TwinTongjiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A05A9BC7339686139457AFF /* Pods_TwinTongjiTests.framework */; };
@@ -97,6 +99,10 @@
 		342BCFB625A5D60900E5222F /* TwinTongji.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwinTongji.m; sourceTree = "<group>"; };
 		342BCFF225A6DE4200E5222F /* FirstSegVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstSegVC.h; sourceTree = "<group>"; };
 		342BCFF325A6DE4E00E5222F /* FirstSegVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstSegVC.m; sourceTree = "<group>"; };
+		342BCFFB25A6F7B100E5222F /* SecondSegVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondSegVC.h; sourceTree = "<group>"; };
+		342BCFFC25A6F7C300E5222F /* SecondSegVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondSegVC.m; sourceTree = "<group>"; };
+		342BD00425A6F91100E5222F /* PostVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostVC.h; sourceTree = "<group>"; };
+		342BD00525A6F92000E5222F /* PostVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostVC.m; sourceTree = "<group>"; };
 		3A9F3CF2FEBED64B0316B671 /* Pods_TwinTongji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwinTongji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5001739C9F89FC2ADBA69BD6 /* Pods-TwinTongji.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwinTongji.release.xcconfig"; path = "Target Support Files/Pods-TwinTongji/Pods-TwinTongji.release.xcconfig"; sourceTree = "<group>"; };
 		51DC34E0468BE85CD1642940 /* Pods-TwinTongji-TwinTongjiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwinTongji-TwinTongjiUITests.release.xcconfig"; path = "Target Support Files/Pods-TwinTongji-TwinTongjiUITests/Pods-TwinTongji-TwinTongjiUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -293,6 +299,10 @@
 			children = (
 				342BCFF225A6DE4200E5222F /* FirstSegVC.h */,
 				342BCFF325A6DE4E00E5222F /* FirstSegVC.m */,
+				342BCFFB25A6F7B100E5222F /* SecondSegVC.h */,
+				342BCFFC25A6F7C300E5222F /* SecondSegVC.m */,
+				342BD00425A6F91100E5222F /* PostVC.h */,
+				342BD00525A6F92000E5222F /* PostVC.m */,
 			);
 			path = TwinTongjiSubVC;
 			sourceTree = "<group>";
@@ -589,12 +599,14 @@
 				342BCF2D259D671800E5222F /* RegisterApi.m in Sources */,
 				342BCE992591F3C300E5222F /* LoginVC.m in Sources */,
 				342BCE352590344C00E5222F /* TabVC.m in Sources */,
+				342BD00625A6F92000E5222F /* PostVC.m in Sources */,
 				342BCFB725A5D60900E5222F /* TwinTongji.m in Sources */,
 				342BCEBA259318B400E5222F /* RegisterVC.m in Sources */,
 				342BCFF425A6DE4E00E5222F /* FirstSegVC.m in Sources */,
 				342BCF37259D69C900E5222F /* NSString+MD5.m in Sources */,
 				342BCE2F2590344C00E5222F /* AppDelegate.m in Sources */,
 				342BCE322590344C00E5222F /* SceneDelegate.m in Sources */,
+				342BCFFD25A6F7C300E5222F /* SecondSegVC.m in Sources */,
 				342BCF1C259CAD2600E5222F /* LoginApi.m in Sources */,
 				342BCEE72593255B00E5222F /* UI_tools.m in Sources */,
 				342BCF15259B3F3200E5222F /* ZJImageMagnification.m in Sources */,
