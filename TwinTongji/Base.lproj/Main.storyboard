@@ -413,28 +413,28 @@
             </objects>
             <point key="canvasLocation" x="825" y="266"/>
         </scene>
-        <!--View Controller-->
+        <!--First SegVC-->
         <scene sceneID="wz6-Za-DF1">
             <objects>
-                <viewController id="SrC-FL-Uvs" sceneMemberID="viewController">
+                <viewController id="SrC-FL-Uvs" customClass="FirstSegVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dct-4E-ecK">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="673"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFj-kj-0OM">
-                                <rect key="frame" x="166" y="326" width="34" height="21"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Tp2-ht-lIL">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="673"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="mapview" destination="Tp2-ht-lIL" id="7FQ-IP-qxg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d36-RQ-Vwt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2611" y="-1493"/>
+            <point key="canvasLocation" x="2609.2307692307691" y="-1493.2464454976302"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="NSF-Uk-hbf">
