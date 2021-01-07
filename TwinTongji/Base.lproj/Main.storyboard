@@ -233,22 +233,56 @@
             </objects>
             <point key="canvasLocation" x="825" y="-1147"/>
         </scene>
-        <!--TwinTongji-->
+        <!--平行同济-->
         <scene sceneID="Era-Ex-27s">
             <objects>
                 <viewController id="Gr8-z2-Uep" customClass="TwinTongji" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RtW-NH-t4v">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BNh-9Q-ZjA">
+                                <rect key="frame" x="0.0" y="88" width="390" height="673"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="6rr-F5-840" kind="embed" id="7Rf-Ze-dlk"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OK2-tL-GtZ">
+                                <rect key="frame" x="0.0" y="88" width="390" height="673"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="SrC-FL-Uvs" kind="embed" id="wKV-rz-zCn"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Jwj-2d-I3F"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="平行同济" image="paperplane" catalog="system" id="Gbp-IR-aY0"/>
-                    <navigationItem key="navigationItem" title="TwinTongji" id="n2v-Yd-Zwv"/>
+                    <navigationItem key="navigationItem" id="n2v-Yd-Zwv">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="p4g-e0-zUr">
+                            <rect key="frame" x="129.66666666666666" y="6" width="130.99999999999997" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="First"/>
+                                <segment title="Second"/>
+                            </segments>
+                            <connections>
+                                <action selector="click_seg_controll:" destination="Gr8-z2-Uep" eventType="valueChanged" id="Kqd-vM-BuK"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="first_containView" destination="OK2-tL-GtZ" id="hZt-UZ-cwe"/>
+                        <outlet property="second_containView" destination="BNh-9Q-ZjA" id="ekL-2a-iHu"/>
+                        <outlet property="segment_controll" destination="p4g-e0-zUr" id="DT7-fd-aWA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iE1-3V-ncW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1754" y="-1147"/>
+            <point key="canvasLocation" x="1753.8461538461538" y="-1147.3933649289099"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="lAc-UV-VtW">
@@ -361,7 +395,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xRJ-RV-mEu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-569.23076923076917" y="795.4976303317535"/>
+            <point key="canvasLocation" x="-1000" y="984"/>
         </scene>
         <!--校内论坛-->
         <scene sceneID="GgV-8p-JkG">
@@ -378,6 +412,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSz-xf-1k5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="825" y="266"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wz6-Za-DF1">
+            <objects>
+                <viewController id="SrC-FL-Uvs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dct-4E-ecK">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="673"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFj-kj-0OM">
+                                <rect key="frame" x="166" y="326" width="34" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d36-RQ-Vwt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2611" y="-1493"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="NSF-Uk-hbf">
+            <objects>
+                <viewController id="6rr-F5-840" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bbd-dK-Xti">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="673"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Second" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vM-Qz-NsC">
+                                <rect key="frame" x="178" y="326" width="58" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cbo-jT-IUX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2611" y="-849"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
