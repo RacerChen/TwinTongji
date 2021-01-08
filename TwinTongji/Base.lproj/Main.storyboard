@@ -557,6 +557,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="相册：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6g-O0-OU2">
+                                <rect key="frame" x="180" y="228" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Izg-jJ-St2">
                                 <rect key="frame" x="94" y="467" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -589,19 +596,66 @@
                                     <action selector="btn_gallery" destination="oSh-eV-i8X" eventType="touchUpInside" id="E3G-wd-he5"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="相册：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6g-O0-OU2">
-                                <rect key="frame" x="180" y="228" width="52" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhg-Lo-NPj">
+                                <rect key="frame" x="77" y="283" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" image="amap_navi_route_history_close.png"/>
+                                <connections>
+                                    <action selector="btn_pic1_cancel" destination="oSh-eV-i8X" eventType="touchUpInside" id="32s-4k-2gg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ebt-rp-ImT">
+                                <rect key="frame" x="181" y="283" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="amap_navi_route_history_close.png"/>
+                                <connections>
+                                    <action selector="btn_pic2_cancel" destination="oSh-eV-i8X" eventType="touchUpInside" id="Cuv-xE-xti"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwp-pM-gBd">
+                                <rect key="frame" x="283" y="283" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="amap_navi_route_history_close.png"/>
+                                <connections>
+                                    <action selector="btn_pic3_cancel" destination="oSh-eV-i8X" eventType="touchUpInside" id="I2e-iE-TZp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxb-Nt-cBY">
+                                <rect key="frame" x="77" y="391" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="amap_navi_route_history_close.png"/>
+                                <connections>
+                                    <action selector="btn_pic4_cancel" destination="oSh-eV-i8X" eventType="touchUpInside" id="9VP-Lx-D0x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fR-uS-U21">
+                                <rect key="frame" x="181" y="391" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="amap_navi_route_history_close.png"/>
+                                <connections>
+                                    <action selector="btn_pic5_cancel" destination="oSh-eV-i8X" eventType="touchUpInside" id="blu-6R-CTx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBA-Zz-ovC">
+                                <rect key="frame" x="283" y="391" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="amap_navi_route_history_close.png"/>
+                                <connections>
+                                    <action selector="btn_pic6_cancel" destination="oSh-eV-i8X" eventType="touchUpInside" id="95q-7u-k3c"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5Rs-Kc-gbG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="tFW-3d-BLU"/>
                     <connections>
+                        <outlet property="btn_pic1" destination="uhg-Lo-NPj" id="nDU-NQ-m2B"/>
+                        <outlet property="btn_pic2" destination="Ebt-rp-ImT" id="S0X-yc-zBl"/>
+                        <outlet property="btn_pic3" destination="wwp-pM-gBd" id="5RF-w1-17D"/>
+                        <outlet property="btn_pic4" destination="lxb-Nt-cBY" id="zbf-Oc-beS"/>
+                        <outlet property="btn_pic5" destination="8fR-uS-U21" id="Dhp-M5-trQ"/>
+                        <outlet property="btn_pic6" destination="EBA-Zz-ovC" id="SxY-Gb-Hgy"/>
                         <outlet property="cur_mapview" destination="dmY-9e-z7F" id="3VS-Yt-F5D"/>
                         <outlet property="imgview_pic1" destination="cnG-WI-yag" id="IL1-xp-UYc"/>
                         <outlet property="imgview_pic2" destination="B7Q-Bh-HPo" id="aNM-19-2O3"/>
@@ -621,6 +675,7 @@
         <segue reference="QPI-LS-Kh0"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="amap_navi_route_history_close.png" width="16" height="16"/>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
         <image name="female_index" width="207" height="337"/>
         <image name="message" catalog="system" width="128" height="113"/>

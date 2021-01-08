@@ -15,6 +15,8 @@
 
 @implementation PostVC
 
+bool free_imgview_index[6] = {true, true, true, true, true, true};
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -53,23 +55,30 @@
     {
         case 1:
             self.imgview_pic1.image = cur_choosed_image;
+            self.btn_pic1.enabled = true;
             break;
         case 2:
             self.imgview_pic2.image = cur_choosed_image;
+            self.btn_pic2.enabled = true;
             break;
         case 3:
             self.imgview_pic3.image = cur_choosed_image;
+            self.btn_pic3.enabled = true;
             break;
         case 4:
             self.imgview_pic4.image = cur_choosed_image;
+            self.btn_pic4.enabled = true;
             break;
         case 5:
             self.imgview_pic5.image = cur_choosed_image;
+            self.btn_pic5.enabled = true;
             break;
         case 6:
             self.imgview_pic6.image = cur_choosed_image;
+            self.btn_pic6.enabled = true;
             break;
     }
+    free_imgview_index[cur_img_index] = false;
     cur_img_index++;
 
 }
@@ -109,5 +118,33 @@
     }
     else
         return true;
+}
+- (IBAction)btn_pic1_cancel
+{
+    
+}
+- (IBAction)btn_pic2_cancel
+{
+    
+}
+- (IBAction)btn_pic3_cancel
+{
+    
+}
+- (IBAction)btn_pic4_cancel
+{
+    
+}
+- (IBAction)btn_pic5_cancel
+{
+    
+}
+- (IBAction)btn_pic6_cancel
+{
+    
+}
+- (int)find_least_free_index
+{
+    return 0;
 }
 @end

@@ -19,12 +19,26 @@
 @property (strong, nonatomic) IBOutlet UIImageView *imgview_pic5;
 @property (strong, nonatomic) IBOutlet UIImageView *imgview_pic6;
 @property (strong, nonatomic) IBOutlet MKMapView *cur_mapview;
+@property (strong, nonatomic) IBOutlet UIButton *btn_pic1;
+@property (strong, nonatomic) IBOutlet UIButton *btn_pic2;
+@property (strong, nonatomic) IBOutlet UIButton *btn_pic3;
+@property (strong, nonatomic) IBOutlet UIButton *btn_pic4;
+@property (strong, nonatomic) IBOutlet UIButton *btn_pic5;
+@property (strong, nonatomic) IBOutlet UIButton *btn_pic6;
+
 
 - (IBAction)btn_camera;
 - (IBAction)btn_gallery;
 - (IBAction)btn_addAudio;
 - (IBAction)btn_addLink;
 - (IBAction)btn_post;
+- (IBAction)btn_pic1_cancel;
+- (IBAction)btn_pic2_cancel;
+- (IBAction)btn_pic3_cancel;
+- (IBAction)btn_pic4_cancel;
+- (IBAction)btn_pic5_cancel;
+- (IBAction)btn_pic6_cancel;
+
 
 
 @end
