@@ -47,6 +47,10 @@
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
+		<string>gps</string>
+		<string>location-services</string>
+		<string>still-camera</string>
+		<string>microphone</string>
 		<string>armv7</string>
 	</array>
 	<key>UIRequiresFullScreen</key>
