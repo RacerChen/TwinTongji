@@ -8,6 +8,10 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "UI_tools.h"
+#import "PostInfo.h"
+#import "MapAnnotation.h"
+
+PostInfo *postInfo;
 
 @interface PostVC : UIViewController
 
@@ -19,6 +23,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *btn_pic1;
 @property (strong, nonatomic) IBOutlet UIButton *btn_pic2;
 @property (strong, nonatomic) IBOutlet UIButton *btn_pic3;
+@property (nonatomic, strong) CLLocationManager *locationManger;
 
 
 - (IBAction)btn_camera;

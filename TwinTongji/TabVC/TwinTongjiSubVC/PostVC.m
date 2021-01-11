@@ -7,7 +7,7 @@
 
 #import "PostVC.h"
 
-@interface PostVC () <UIImagePickerControllerDelegate,UINavigationControllerDelegate,CLLocationManagerDelegate>
+@interface PostVC () <MKMapViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,CLLocationManagerDelegate>
 {
     int cur_img_index;
 }
@@ -19,9 +19,10 @@ bool free_imgview_index[3] = {true, true, true};
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    postInfo = [[PostInfo alloc] init];
     // Do any additional setup after loading the view.
     cur_img_index = 1;
-    [self init_map_region];
+    [self init_map];
 }
 
 - (IBAction)btn_camera
@@ -126,14 +127,21 @@ bool free_imgview_index[3] = {true, true, true};
     return 0;
 }
 
--(void) init_map_region
+-(void) init_map
 {
     [self.cur_mapview setRegion:MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2DMake(31.286113, 121.215403), 2000, 2000)];
     self.cur_mapview.showsUserLocation = YES;
+    self.cur_mapview.delegate = self;
+    self.locationManger = [[CLLocationManager alloc] init];//创建位置管理器
+    self.locationManger.delegate=self;//设置代理
+    self.locationManger.desiredAccuracy=kCLLocationAccuracyBest;//指定需要的精度级别
+    self.locationManger.distanceFilter=1000.0f;//设置距离筛选器
+    [self.locationManger startUpdatingLocation];//启动位置管理器
     
     // Add gesture
     UITapGestureRecognizer *mTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapPress:)];
     [self.cur_mapview addGestureRecognizer:mTap];
+
 }
 
 - (void)tapPress:(UIGestureRecognizer*)gestureRecognizer
@@ -141,6 +149,20 @@ bool free_imgview_index[3] = {true, true, true};
     CGPoint touchPoint = [gestureRecognizer locationInView:self.cur_mapview];//这里touchPoint是点击的某点在地图控件中的位置
     CLLocationCoordinate2D touchMapCoordinate =
     [self.cur_mapview convertPoint:touchPoint toCoordinateFromView:self.cur_mapview];//这里touchMapCoordinate就是该点的经纬度了
+    
+    //我们不能移除大头针,我们只需要移除大头针标注模型即可
+    [self.cur_mapview removeAnnotations:self.cur_mapview.annotations];
+    
+    // Add map annotation
+    MapAnnotation *anno = [[MapAnnotation alloc] init];
+    anno.title = @"发布地点";
+    anno.subtitle = @"此地";
+    anno.coordinate = CLLocationCoordinate2DMake(touchMapCoordinate.latitude, touchMapCoordinate.longitude);
+    [self.cur_mapview addAnnotation:anno];
+    
     NSLog(@"latitude: %f and longitude: %f", touchMapCoordinate.latitude, touchMapCoordinate.longitude);
 }
+
+
+
 @end
