@@ -7,7 +7,7 @@
 
 #import "PostVC.h"
 
-@interface PostVC () <UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@interface PostVC () <UIImagePickerControllerDelegate,UINavigationControllerDelegate,CLLocationManagerDelegate>
 {
     int cur_img_index;
 }
@@ -15,12 +15,13 @@
 
 @implementation PostVC
 
-bool free_imgview_index[6] = {true, true, true, true, true, true};
+bool free_imgview_index[3] = {true, true, true};
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     cur_img_index = 1;
+    [self init_map_region];
 }
 
 - (IBAction)btn_camera
@@ -64,18 +65,6 @@ bool free_imgview_index[6] = {true, true, true, true, true, true};
         case 3:
             self.imgview_pic3.image = cur_choosed_image;
             self.btn_pic3.enabled = true;
-            break;
-        case 4:
-            self.imgview_pic4.image = cur_choosed_image;
-            self.btn_pic4.enabled = true;
-            break;
-        case 5:
-            self.imgview_pic5.image = cur_choosed_image;
-            self.btn_pic5.enabled = true;
-            break;
-        case 6:
-            self.imgview_pic6.image = cur_choosed_image;
-            self.btn_pic6.enabled = true;
             break;
     }
     free_imgview_index[cur_img_index] = false;
@@ -131,20 +120,27 @@ bool free_imgview_index[6] = {true, true, true, true, true, true};
 {
     
 }
-- (IBAction)btn_pic4_cancel
-{
-    
-}
-- (IBAction)btn_pic5_cancel
-{
-    
-}
-- (IBAction)btn_pic6_cancel
-{
-    
-}
+
 - (int)find_least_free_index
 {
     return 0;
+}
+
+-(void) init_map_region
+{
+    [self.cur_mapview setRegion:MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2DMake(31.286113, 121.215403), 2000, 2000)];
+    self.cur_mapview.showsUserLocation = YES;
+    
+    // Add gesture
+    UITapGestureRecognizer *mTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapPress:)];
+    [self.cur_mapview addGestureRecognizer:mTap];
+}
+
+- (void)tapPress:(UIGestureRecognizer*)gestureRecognizer
+{
+    CGPoint touchPoint = [gestureRecognizer locationInView:self.cur_mapview];//这里touchPoint是点击的某点在地图控件中的位置
+    CLLocationCoordinate2D touchMapCoordinate =
+    [self.cur_mapview convertPoint:touchPoint toCoordinateFromView:self.cur_mapview];//这里touchMapCoordinate就是该点的经纬度了
+    NSLog(@"latitude: %f and longitude: %f", touchMapCoordinate.latitude, touchMapCoordinate.longitude);
 }
 @end

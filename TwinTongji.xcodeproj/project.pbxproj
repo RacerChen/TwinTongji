@@ -35,6 +35,7 @@
 		342BCFF425A6DE4E00E5222F /* FirstSegVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCFF325A6DE4E00E5222F /* FirstSegVC.m */; };
 		342BCFFD25A6F7C300E5222F /* SecondSegVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCFFC25A6F7C300E5222F /* SecondSegVC.m */; };
 		342BD00625A6F92000E5222F /* PostVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BD00525A6F92000E5222F /* PostVC.m */; };
+		342BD01025AC6FE300E5222F /* PostInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BD00F25AC6FE300E5222F /* PostInfo.m */; };
 		40B6BF62F1B6E5B51D24CC1C /* Pods_TwinTongji_TwinTongjiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5216FE386E2EE55233FFA34C /* Pods_TwinTongji_TwinTongjiUITests.framework */; };
 		C8564F65B3957DC54815E0A7 /* Pods_TwinTongji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9F3CF2FEBED64B0316B671 /* Pods_TwinTongji.framework */; };
 		E8BB31D1DEBB087A53A2EA47 /* Pods_TwinTongjiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A05A9BC7339686139457AFF /* Pods_TwinTongjiTests.framework */; };
@@ -103,6 +104,8 @@
 		342BCFFC25A6F7C300E5222F /* SecondSegVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondSegVC.m; sourceTree = "<group>"; };
 		342BD00425A6F91100E5222F /* PostVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostVC.h; sourceTree = "<group>"; };
 		342BD00525A6F92000E5222F /* PostVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostVC.m; sourceTree = "<group>"; };
+		342BD00E25AC6FD600E5222F /* PostInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostInfo.h; sourceTree = "<group>"; };
+		342BD00F25AC6FE300E5222F /* PostInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostInfo.m; sourceTree = "<group>"; };
 		3A9F3CF2FEBED64B0316B671 /* Pods_TwinTongji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwinTongji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5001739C9F89FC2ADBA69BD6 /* Pods-TwinTongji.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwinTongji.release.xcconfig"; path = "Target Support Files/Pods-TwinTongji/Pods-TwinTongji.release.xcconfig"; sourceTree = "<group>"; };
 		51DC34E0468BE85CD1642940 /* Pods-TwinTongji-TwinTongjiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwinTongji-TwinTongjiUITests.release.xcconfig"; path = "Target Support Files/Pods-TwinTongji-TwinTongjiUITests/Pods-TwinTongji-TwinTongjiUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +179,7 @@
 		342BCE2C2590344C00E5222F /* TwinTongji */ = {
 			isa = PBXGroup;
 			children = (
+				342BD00D25AC6FB500E5222F /* EntityClass */,
 				342BCF34259D69B000E5222F /* Category */,
 				342BCF19259CAC4800E5222F /* RequestBackendUtil */,
 				342BCEC3259318F100E5222F /* Tools */,
@@ -305,6 +309,15 @@
 				342BD00525A6F92000E5222F /* PostVC.m */,
 			);
 			path = TwinTongjiSubVC;
+			sourceTree = "<group>";
+		};
+		342BD00D25AC6FB500E5222F /* EntityClass */ = {
+			isa = PBXGroup;
+			children = (
+				342BD00E25AC6FD600E5222F /* PostInfo.h */,
+				342BD00F25AC6FE300E5222F /* PostInfo.m */,
+			);
+			path = EntityClass;
 			sourceTree = "<group>";
 		};
 		87FF6B897C34C1D73F6FF448 /* Pods */ = {
@@ -604,6 +617,7 @@
 				342BCEBA259318B400E5222F /* RegisterVC.m in Sources */,
 				342BCFF425A6DE4E00E5222F /* FirstSegVC.m in Sources */,
 				342BCF37259D69C900E5222F /* NSString+MD5.m in Sources */,
+				342BD01025AC6FE300E5222F /* PostInfo.m in Sources */,
 				342BCE2F2590344C00E5222F /* AppDelegate.m in Sources */,
 				342BCE322590344C00E5222F /* SceneDelegate.m in Sources */,
 				342BCFFD25A6F7C300E5222F /* SecondSegVC.m in Sources */,

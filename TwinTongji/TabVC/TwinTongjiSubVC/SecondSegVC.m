@@ -7,7 +7,7 @@
 
 #import "SecondSegVC.h"
 
-@interface SecondSegVC ()
+@interface SecondSegVC () 
 
 @end
 
