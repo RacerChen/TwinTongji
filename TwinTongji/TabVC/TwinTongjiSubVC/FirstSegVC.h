@@ -7,6 +7,9 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "PostInfo.h"
+
+extern PostInfo *postInfo;
 
 @interface FirstSegVC : UIViewController
 

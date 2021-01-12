@@ -12,6 +12,8 @@
 
 @property float latitude;
 @property float longitude;
+@property NSString *content;
+@property NSString *poster;
 @property UIImage *post_pic1;
 @property UIImage *post_pic2;
 @property UIImage *post_pic3;

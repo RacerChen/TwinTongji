@@ -8,7 +8,7 @@
 #import "FirstSegVC.h"
 #import "MapAnnotation.h"
 
-@interface FirstSegVC () <CLLocationManagerDelegate, MKMapViewDelegate, MKOverlay>
+@interface FirstSegVC () <CLLocationManagerDelegate, MKMapViewDelegate, MKOverlay, UINavigationControllerDelegate>
 {
     CLLocationCoordinate2D bounary_points[15];
 }
@@ -24,9 +24,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationController.delegate=self;
     [self init_map];
 //    [self startStandardUpdates];
 }
+
+// for viewWillAppear
+-(void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    [viewController viewWillAppear:animated];
+}
+-(void)viewWillAppear:(BOOL)animated
+{
+    NSLog(@"现在可以使用了");
+    CLLocationCoordinate2D anno_coord_post = CLLocationCoordinate2DMake(postInfo.latitude, postInfo.longitude);
+    MapAnnotation *anno_post = [[MapAnnotation alloc] initWithCoordinate:anno_coord_post andTile:postInfo.content andTheSubtitle:postInfo.poster];
+    [self.mapview addAnnotation:anno_post];
+}
+
 
 -(void) init_map
 {

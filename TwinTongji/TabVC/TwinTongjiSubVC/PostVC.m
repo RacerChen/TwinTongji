@@ -97,6 +97,10 @@ bool free_imgview_index[3] = {true, true, true};
 - (IBAction)btn_post
 {
     NSLog(@"post");
+    postInfo.poster = @"CJJ";
+    postInfo.content = self.textview_post.text;
+    [self.navigationController viewWillAppear:YES];
+    [self.navigationController popViewControllerAnimated:true];
 }
 
 - (BOOL) check_img_index
@@ -159,6 +163,8 @@ bool free_imgview_index[3] = {true, true, true};
     anno.subtitle = @"此地";
     anno.coordinate = CLLocationCoordinate2DMake(touchMapCoordinate.latitude, touchMapCoordinate.longitude);
     [self.cur_mapview addAnnotation:anno];
+    postInfo.latitude = touchMapCoordinate.latitude;
+    postInfo.longitude = touchMapCoordinate.longitude;
     
     NSLog(@"latitude: %f and longitude: %f", touchMapCoordinate.latitude, touchMapCoordinate.longitude);
 }

@@ -14,7 +14,7 @@
 
 @implementation PostInfo
 
-@synthesize latitude, longitude, post_pic1, post_pic2, post_pic3, audio_path, web_url;
+@synthesize latitude, longitude, content, poster , post_pic1, post_pic2, post_pic3, audio_path, web_url;
 
 - (id) init
 {
