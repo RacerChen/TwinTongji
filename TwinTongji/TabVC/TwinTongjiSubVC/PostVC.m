@@ -101,9 +101,9 @@ bool free_imgview_index[3] = {true, true, true};
 
 - (BOOL) check_img_index
 {
-    if (cur_img_index > 6)
+    if (cur_img_index > 3)
     {
-        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:@"最多支持6张照片" clickDoFunction:nil] animated:true completion:nil];
+        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:@"最多支持3张照片" clickDoFunction:nil] animated:true completion:nil];
         return false;
     }
     else
