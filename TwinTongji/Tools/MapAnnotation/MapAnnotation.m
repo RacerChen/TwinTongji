@@ -9,6 +9,17 @@
 
 @implementation MapAnnotation
 
-@synthesize title,coordinate,subtitle;
+@synthesize coordinate, title, subtitle;
+
+- (id) initWithCoordinate: (CLLocationCoordinate2D) theCoordinate andTile:(NSString *) theTitle andTheSubtitle:(NSString *) theSubTitle;
+{
+    if(self = [super init])
+    {
+        coordinate = theCoordinate;
+        title = theTitle;
+        subtitle = theSubTitle;
+    }
+    return self;
+}
 
 @end

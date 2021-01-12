@@ -6,6 +6,7 @@
 //
 
 #import "FirstSegVC.h"
+#import "MapAnnotation.h"
 
 @interface FirstSegVC () <CLLocationManagerDelegate, MKMapViewDelegate, MKOverlay>
 {
@@ -17,6 +18,8 @@
 @implementation FirstSegVC
 
 @synthesize locationManager;
+@synthesize boundingMapRect;
+@synthesize coordinate;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -71,6 +74,42 @@
     //根据点的数组创建一个MKPolyline，并添加这个line作为overlay（可以添加很多overlay，堆栈形式）
     MKPolyline *line = [MKPolyline polylineWithCoordinates:bounary_points count:15];
     [self.mapview addOverlay: line];
+    
+    // init annotation
+    CLLocationCoordinate2D anno_coord1 = CLLocationCoordinate2DMake(31.289316, 121.210175);
+    CLLocationCoordinate2D anno_coord2 = CLLocationCoordinate2DMake(31.288136, 121.209781);
+    CLLocationCoordinate2D anno_coord3 = CLLocationCoordinate2DMake(31.288698, 121.210866);
+    CLLocationCoordinate2D anno_coord4 = CLLocationCoordinate2DMake(31.284118, 121.212937);
+    CLLocationCoordinate2D anno_coord5 = CLLocationCoordinate2DMake(31.283219, 121.212444);
+    CLLocationCoordinate2D anno_coord6 = CLLocationCoordinate2DMake(31.282264, 121.213792);
+    CLLocationCoordinate2D anno_coord7 = CLLocationCoordinate2DMake(31.283078, 121.215107);
+    CLLocationCoordinate2D anno_coord8 = CLLocationCoordinate2DMake(31.287237, 121.219743);
+    CLLocationCoordinate2D anno_coord9 = CLLocationCoordinate2DMake(31.286731, 121.220433);
+    CLLocationCoordinate2D anno_coord10 = CLLocationCoordinate2DMake(31.286506, 121.219250);
+    CLLocationCoordinate2D anno_coord11 = CLLocationCoordinate2DMake(31.287658, 121.220762);
+    MapAnnotation *anno1 = [[MapAnnotation alloc] initWithCoordinate:anno_coord1 andTile:@"FSF" andTheSubtitle:@"这里有好吃的"];
+    MapAnnotation *anno2 = [[MapAnnotation alloc] initWithCoordinate:anno_coord2 andTile:@"FLW" andTheSubtitle:@"这里明天会有讲座"];
+    MapAnnotation *anno3 = [[MapAnnotation alloc] initWithCoordinate:anno_coord3 andTile:@"PFE" andTheSubtitle:@"这里的美景好美啊"];
+    MapAnnotation *anno4 = [[MapAnnotation alloc] initWithCoordinate:anno_coord4 andTile:@"GOE" andTheSubtitle:@"天青色等烟雨而我在等你"];
+    MapAnnotation *anno5 = [[MapAnnotation alloc] initWithCoordinate:anno_coord5 andTile:@"PEW" andTheSubtitle:@"我明天会在这等你"];
+    MapAnnotation *anno6 = [[MapAnnotation alloc] initWithCoordinate:anno_coord6 andTile:@"FS" andTheSubtitle:@"我昨天在这里捡到一把伞"];
+    MapAnnotation *anno7 = [[MapAnnotation alloc] initWithCoordinate:anno_coord7 andTile:@"OGO" andTheSubtitle:@"我在这里埋了一点宝藏哦"];
+    MapAnnotation *anno8 = [[MapAnnotation alloc] initWithCoordinate:anno_coord8 andTile:@"MFS" andTheSubtitle:@"我们社团明天在这宣讲"];
+    MapAnnotation *anno9 = [[MapAnnotation alloc] initWithCoordinate:anno_coord9 andTile:@"PQP" andTheSubtitle:@"有人来着一起跑步吗"];
+    MapAnnotation *anno10 = [[MapAnnotation alloc] initWithCoordinate:anno_coord10 andTile:@"NFH" andTheSubtitle:@"这里明天会有好玩的"];
+    MapAnnotation *anno11 = [[MapAnnotation alloc] initWithCoordinate:anno_coord11 andTile:@"CJJ" andTheSubtitle:@"这里后天会有好看的"];
+    [self.mapview addAnnotation:anno1];
+    [self.mapview addAnnotation:anno2];
+    [self.mapview addAnnotation:anno3];
+    [self.mapview addAnnotation:anno4];
+    [self.mapview addAnnotation:anno5];
+    [self.mapview addAnnotation:anno6];
+    [self.mapview addAnnotation:anno7];
+    [self.mapview addAnnotation:anno8];
+    [self.mapview addAnnotation:anno9];
+    [self.mapview addAnnotation:anno10];
+    [self.mapview addAnnotation:anno11];
+    
 }
 
 
@@ -109,10 +148,6 @@
     [locationManager startUpdatingLocation];
     
 }
-
-@synthesize boundingMapRect;
-
-@synthesize coordinate;
 
 @end
 

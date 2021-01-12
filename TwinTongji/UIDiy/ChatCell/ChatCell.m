@@ -11,7 +11,7 @@
 
 @implementation ChatCell
 
-
+@synthesize portrait, messageAlarm, nickname, schoolName, messageTime, messageContent;
 
 -(id) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

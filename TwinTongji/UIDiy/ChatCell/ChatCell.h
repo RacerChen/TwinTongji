@@ -10,6 +10,11 @@
 
 @interface ChatCell : UITableViewCell//该类继承于UITableViewCell
 
-
+@property (strong, nonatomic) IBOutlet UIImageView *portrait;
+@property (strong, nonatomic) IBOutlet UIImageView *messageAlarm;
+@property (strong, nonatomic) IBOutlet UILabel *nickname;
+@property (strong, nonatomic) IBOutlet UILabel *schoolName;
+@property (strong, nonatomic) IBOutlet UILabel *messageTime;
+@property (strong, nonatomic) IBOutlet UILabel *messageContent;
 
 @end

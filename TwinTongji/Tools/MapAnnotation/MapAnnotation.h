@@ -15,4 +15,7 @@
 @property (nonatomic, copy) NSString *title;
 //大头针的子标题
 @property (nonatomic, copy) NSString *subtitle;
+
+- (id) initWithCoordinate: (CLLocationCoordinate2D) theCoordinate andTile:(NSString *) theTitle andTheSubtitle:(NSString *) theSubTitle;
+
 @end
