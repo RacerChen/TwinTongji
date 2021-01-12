@@ -100,10 +100,28 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="即时聊天" image="message" catalog="system" id="K0s-JC-gTN"/>
+                    <navigationItem key="navigationItem" id="EuY-Oh-3ps"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k47-7M-ZnH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="826" y="-449"/>
+            <point key="canvasLocation" x="1754" y="-216"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="fyy-rQ-56W">
+            <objects>
+                <navigationController id="bdB-hH-cE1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="SdK-Nt-4AS"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="34n-Yb-sKs">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="CaA-qa-FoW" kind="relationship" relationship="rootViewController" id="bh5-oZ-4Jg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sS0-sP-PET" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="825" y="-216"/>
         </scene>
         <!--个人信息-->
         <scene sceneID="Jp7-04-2Nn">
@@ -197,7 +215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Rl-Lh-9DE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1753.8461538461538" y="983.88625592417054"/>
+            <point key="canvasLocation" x="1754" y="1568"/>
         </scene>
         <!--Item-->
         <scene sceneID="aLe-u2-9zG">
@@ -214,7 +232,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tl5-ef-uaY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="984"/>
+            <point key="canvasLocation" x="825" y="1568"/>
         </scene>
         <!--Item-->
         <scene sceneID="WTm-2a-h8H">
@@ -301,8 +319,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="jvA-Xr-PQF" kind="relationship" relationship="viewControllers" id="ZAh-Cn-aJj"/>
-                        <segue destination="CaA-qa-FoW" kind="relationship" relationship="viewControllers" id="yf5-pR-5Ce"/>
-                        <segue destination="VjF-gL-eH2" kind="relationship" relationship="viewControllers" id="YMN-Tm-aha"/>
+                        <segue destination="bdB-hH-cE1" kind="relationship" relationship="viewControllers" id="tbf-Po-Vah"/>
+                        <segue destination="KTH-0W-cgD" kind="relationship" relationship="viewControllers" id="8N4-JT-0VF"/>
                         <segue destination="Jnm-uD-uWQ" kind="relationship" relationship="viewControllers" id="rSw-EH-4j6"/>
                     </connections>
                 </tabBarController>
@@ -402,6 +420,23 @@
             </objects>
             <point key="canvasLocation" x="-1000" y="984"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="8iW-Ar-K5B">
+            <objects>
+                <navigationController id="KTH-0W-cgD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Sb8-xW-xSX"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2AT-sm-Xi3">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="VjF-gL-eH2" kind="relationship" relationship="rootViewController" id="ODp-9y-2WH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ffo-UN-nRd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="825" y="621"/>
+        </scene>
         <!--校内论坛-->
         <scene sceneID="GgV-8p-JkG">
             <objects>
@@ -413,10 +448,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="校内论坛" image="person.3" catalog="system" id="rU3-oU-Zoj"/>
+                    <navigationItem key="navigationItem" id="csW-5x-Q0s"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSz-xf-1k5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="266"/>
+            <point key="canvasLocation" x="1754" y="621"/>
         </scene>
         <!--First SegVC-->
         <scene sceneID="wz6-Za-DF1">

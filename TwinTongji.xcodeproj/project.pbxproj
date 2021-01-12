@@ -36,7 +36,11 @@
 		342BCFFD25A6F7C300E5222F /* SecondSegVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BCFFC25A6F7C300E5222F /* SecondSegVC.m */; };
 		342BD00625A6F92000E5222F /* PostVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BD00525A6F92000E5222F /* PostVC.m */; };
 		342BD01025AC6FE300E5222F /* PostInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BD00F25AC6FE300E5222F /* PostInfo.m */; };
-		342BD02625AC8FBC00E5222F /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BD02525AC8FBC00E5222F /* MapAnnotation.m */; };
+		342BD03125AD7D4D00E5222F /* ForumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 342BD03025AD7D4D00E5222F /* ForumCell.xib */; };
+		342BD03725AD7D7600E5222F /* ForumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BD03625AD7D7600E5222F /* ForumCell.m */; };
+		342BD04025AD7D9400E5222F /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BD03F25AD7D9400E5222F /* ChatCell.m */; };
+		342BD04825AD7D9F00E5222F /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 342BD04725AD7D9F00E5222F /* ChatCell.xib */; };
+		342BD05525AD85F000E5222F /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 342BD05425AD85F000E5222F /* MapAnnotation.m */; };
 		40B6BF62F1B6E5B51D24CC1C /* Pods_TwinTongji_TwinTongjiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5216FE386E2EE55233FFA34C /* Pods_TwinTongji_TwinTongjiUITests.framework */; };
 		C8564F65B3957DC54815E0A7 /* Pods_TwinTongji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9F3CF2FEBED64B0316B671 /* Pods_TwinTongji.framework */; };
 		E8BB31D1DEBB087A53A2EA47 /* Pods_TwinTongjiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A05A9BC7339686139457AFF /* Pods_TwinTongjiTests.framework */; };
@@ -107,8 +111,14 @@
 		342BD00525A6F92000E5222F /* PostVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostVC.m; sourceTree = "<group>"; };
 		342BD00E25AC6FD600E5222F /* PostInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostInfo.h; sourceTree = "<group>"; };
 		342BD00F25AC6FE300E5222F /* PostInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostInfo.m; sourceTree = "<group>"; };
-		342BD02425AC8FB000E5222F /* MapAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MapAnnotation.h; path = ../../../../../../../Documents/MapAnnotation.h; sourceTree = "<group>"; };
-		342BD02525AC8FBC00E5222F /* MapAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MapAnnotation.m; path = ../../../../../../../Documents/MapAnnotation.m; sourceTree = "<group>"; };
+		342BD03025AD7D4D00E5222F /* ForumCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForumCell.xib; sourceTree = "<group>"; };
+		342BD03525AD7D6800E5222F /* ForumCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForumCell.h; sourceTree = "<group>"; };
+		342BD03625AD7D7600E5222F /* ForumCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForumCell.m; sourceTree = "<group>"; };
+		342BD03E25AD7D8300E5222F /* ChatCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatCell.h; sourceTree = "<group>"; };
+		342BD03F25AD7D9400E5222F /* ChatCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatCell.m; sourceTree = "<group>"; };
+		342BD04725AD7D9F00E5222F /* ChatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatCell.xib; sourceTree = "<group>"; };
+		342BD05325AD85E600E5222F /* MapAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
+		342BD05425AD85F000E5222F /* MapAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
 		3A9F3CF2FEBED64B0316B671 /* Pods_TwinTongji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwinTongji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5001739C9F89FC2ADBA69BD6 /* Pods-TwinTongji.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwinTongji.release.xcconfig"; path = "Target Support Files/Pods-TwinTongji/Pods-TwinTongji.release.xcconfig"; sourceTree = "<group>"; };
 		51DC34E0468BE85CD1642940 /* Pods-TwinTongji-TwinTongjiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwinTongji-TwinTongjiUITests.release.xcconfig"; path = "Target Support Files/Pods-TwinTongji-TwinTongjiUITests/Pods-TwinTongji-TwinTongjiUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,6 +192,7 @@
 		342BCE2C2590344C00E5222F /* TwinTongji */ = {
 			isa = PBXGroup;
 			children = (
+				342BD02D25AD7D0800E5222F /* UIDiy */,
 				342BD00D25AC6FB500E5222F /* EntityClass */,
 				342BCF34259D69B000E5222F /* Category */,
 				342BCF19259CAC4800E5222F /* RequestBackendUtil */,
@@ -257,7 +268,7 @@
 		342BCEC3259318F100E5222F /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				342BD01D25AC8F7B00E5222F /* MapRelated */,
+				342BD04F25AD85B000E5222F /* MapAnnotation */,
 				342BCF12259B3F0300E5222F /* ThirdPartUI */,
 				342BCEC52593190C00E5222F /* UI */,
 			);
@@ -324,13 +335,42 @@
 			path = EntityClass;
 			sourceTree = "<group>";
 		};
-		342BD01D25AC8F7B00E5222F /* MapRelated */ = {
+		342BD02D25AD7D0800E5222F /* UIDiy */ = {
 			isa = PBXGroup;
 			children = (
-				342BD02425AC8FB000E5222F /* MapAnnotation.h */,
-				342BD02525AC8FBC00E5222F /* MapAnnotation.m */,
+				342BD02F25AD7D1A00E5222F /* ForumCell */,
+				342BD02E25AD7D1300E5222F /* ChatCell */,
 			);
-			path = MapRelated;
+			path = UIDiy;
+			sourceTree = "<group>";
+		};
+		342BD02E25AD7D1300E5222F /* ChatCell */ = {
+			isa = PBXGroup;
+			children = (
+				342BD04725AD7D9F00E5222F /* ChatCell.xib */,
+				342BD03E25AD7D8300E5222F /* ChatCell.h */,
+				342BD03F25AD7D9400E5222F /* ChatCell.m */,
+			);
+			path = ChatCell;
+			sourceTree = "<group>";
+		};
+		342BD02F25AD7D1A00E5222F /* ForumCell */ = {
+			isa = PBXGroup;
+			children = (
+				342BD03025AD7D4D00E5222F /* ForumCell.xib */,
+				342BD03525AD7D6800E5222F /* ForumCell.h */,
+				342BD03625AD7D7600E5222F /* ForumCell.m */,
+			);
+			path = ForumCell;
+			sourceTree = "<group>";
+		};
+		342BD04F25AD85B000E5222F /* MapAnnotation */ = {
+			isa = PBXGroup;
+			children = (
+				342BD05325AD85E600E5222F /* MapAnnotation.h */,
+				342BD05425AD85F000E5222F /* MapAnnotation.m */,
+			);
+			path = MapAnnotation;
 			sourceTree = "<group>";
 		};
 		87FF6B897C34C1D73F6FF448 /* Pods */ = {
@@ -457,7 +497,9 @@
 			files = (
 				342BCE402590344E00E5222F /* LaunchScreen.storyboard in Resources */,
 				342BCE3D2590344E00E5222F /* Assets.xcassets in Resources */,
+				342BD04825AD7D9F00E5222F /* ChatCell.xib in Resources */,
 				342BCE382590344C00E5222F /* Main.storyboard in Resources */,
+				342BD03125AD7D4D00E5222F /* ForumCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,18 +668,20 @@
 				342BCE992591F3C300E5222F /* LoginVC.m in Sources */,
 				342BCE352590344C00E5222F /* TabVC.m in Sources */,
 				342BD00625A6F92000E5222F /* PostVC.m in Sources */,
-				342BD02625AC8FBC00E5222F /* MapAnnotation.m in Sources */,
 				342BCFB725A5D60900E5222F /* TwinTongji.m in Sources */,
 				342BCEBA259318B400E5222F /* RegisterVC.m in Sources */,
 				342BCFF425A6DE4E00E5222F /* FirstSegVC.m in Sources */,
+				342BD03725AD7D7600E5222F /* ForumCell.m in Sources */,
 				342BCF37259D69C900E5222F /* NSString+MD5.m in Sources */,
 				342BD01025AC6FE300E5222F /* PostInfo.m in Sources */,
 				342BCE2F2590344C00E5222F /* AppDelegate.m in Sources */,
+				342BD04025AD7D9400E5222F /* ChatCell.m in Sources */,
 				342BCE322590344C00E5222F /* SceneDelegate.m in Sources */,
 				342BCFFD25A6F7C300E5222F /* SecondSegVC.m in Sources */,
 				342BCF1C259CAD2600E5222F /* LoginApi.m in Sources */,
 				342BCEE72593255B00E5222F /* UI_tools.m in Sources */,
 				342BCF15259B3F3200E5222F /* ZJImageMagnification.m in Sources */,
+				342BD05525AD85F000E5222F /* MapAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
