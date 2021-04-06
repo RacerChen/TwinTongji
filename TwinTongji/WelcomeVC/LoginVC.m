@@ -51,26 +51,28 @@
         [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:@"请输入密码" clickDoFunction:nil] animated:true completion:nil];
         return;
     }
+
     
-    [curLoginApi login_request:textField_Lg_ID.text password:textField_lg_password.text];
-    LoginStatusCode statusCode = curLoginApi.return_code; // Get from backend, init for test
-    NSLog(@"!!!!!!!!%d", statusCode);
-    if ([textField_Lg_ID.text isEqualToString: @"cjj"] && [textField_lg_password.text isEqualToString: @"cjj"] )
+    [self->curLoginApi login_request:self->textField_Lg_ID.text password:self->textField_lg_password.text];
+    
+    NSLog(@"!!!!!!!!%d", curLoginApi.return_code);
+    if ([textField_Lg_ID.text isEqualToString: @"cjj@qq.com"] && [textField_lg_password.text isEqualToString: @"cjj"] )  // For test
     {
         NSLog(@"Login: ID:%@ and password:%@. Successfully", textField_Lg_ID.text, textField_lg_password.text);
-        statusCode = LOGIN_SUCCESS;
+        [curLoginApi login_request:textField_Lg_ID.text password:textField_lg_password.text];
+        curLoginApi.return_code = LOGIN_SUCCESS;
+        NSLog(@"Return Code:%d", curLoginApi.return_code);
     }
-    if(statusCode == LOGIN_SUCCESS)
+    if(curLoginApi.return_code == LOGIN_SUCCESS)
     {
         [UI_tools navigator:self.navigationController showDetailOf:@"TabVC" inStoryBoard:@"Main"];
-        return;
     }
     else
     {
         NSArray *login_status = [NSArray arrayWithObjects:@"网络不佳，登录失败", @"用户名或密码错误，请重新登录", @"登录成功", nil];
-        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:login_status[statusCode] clickDoFunction:nil] animated:true completion:nil];
-        return;
+        [self presentViewController:[UI_tools alert_withName:@"提示" andMessage:login_status[curLoginApi.return_code] clickDoFunction:nil] animated:true completion:nil];
     }
+    curLoginApi.return_code = LOGIN_FAIL_NETWORK;
 }
 
 -(IBAction) btn_register

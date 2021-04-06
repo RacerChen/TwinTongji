@@ -17,6 +17,7 @@ typedef enum _LoginStatusCode
 @interface LoginApi : NSObject
 
 @property int return_code;
+@property dispatch_semaphore_t semaphore;
 
 -(void) login_request:(NSString *) userID password: (NSString *) password;
 

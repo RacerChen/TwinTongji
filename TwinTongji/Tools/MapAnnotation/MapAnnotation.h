@@ -16,6 +16,8 @@
 //大头针的子标题
 @property (nonatomic, copy) NSString *subtitle;
 
+@property(nonatomic) MKPinAnnotationColor pinColor;
+
 - (id) initWithCoordinate: (CLLocationCoordinate2D) theCoordinate andTile:(NSString *) theTitle andTheSubtitle:(NSString *) theSubTitle;
 
 @end

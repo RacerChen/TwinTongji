@@ -125,6 +125,11 @@
     [self.mapview addAnnotation:anno10];
     [self.mapview addAnnotation:anno11];
     
+    CLLocationCoordinate2D anno_lib = CLLocationCoordinate2DMake(31.286659, 121.211983);
+    MapAnnotation *anno_library = [[MapAnnotation alloc] initWithCoordinate:anno_lib andTile:@"图书馆" andTheSubtitle:@"同济大学"];
+    anno_library.pinColor = MKPinAnnotationColorGreen;
+    [self.mapview addAnnotation:anno_library];
+    
 }
 
 
@@ -135,7 +140,7 @@
         MKPolylineView *lineview=[[MKPolylineView alloc] initWithOverlay:overlay];
         lineview.strokeColor=[[UIColor blueColor] colorWithAlphaComponent:0.5];
         lineview.lineWidth=6.0;
-        lineview.fillColor= [UIColor redColor];
+        lineview.fillColor= [UIColor greenColor];
         return lineview;
     }
     return nil;

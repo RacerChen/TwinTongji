@@ -7,7 +7,7 @@
 
 #import "PostVC.h"
 
-@interface PostVC () <MKMapViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,CLLocationManagerDelegate>
+@interface PostVC () <MKMapViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,CLLocationManagerDelegate, UITextFieldDelegate>
 {
     int cur_img_index;
 }
@@ -167,6 +167,19 @@ bool free_imgview_index[3] = {true, true, true};
     postInfo.longitude = touchMapCoordinate.longitude;
     
     NSLog(@"latitude: %f and longitude: %f", touchMapCoordinate.latitude, touchMapCoordinate.longitude);
+}
+
+//当用户按下return键或者按回车键，keyboard消失
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+//当用户按下空白处，keyboard消失
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
 }
 
 
