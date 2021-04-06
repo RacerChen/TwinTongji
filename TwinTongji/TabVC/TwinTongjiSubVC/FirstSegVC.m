@@ -7,6 +7,7 @@
 
 #import "FirstSegVC.h"
 #import "MapAnnotation.h"
+#import "AuthorityAnnotation.h"
 
 @interface FirstSegVC () <CLLocationManagerDelegate, MKMapViewDelegate, MKOverlay, UINavigationControllerDelegate>
 {
@@ -125,13 +126,73 @@
     [self.mapview addAnnotation:anno10];
     [self.mapview addAnnotation:anno11];
     
-    CLLocationCoordinate2D anno_lib = CLLocationCoordinate2DMake(31.286659, 121.211983);
-    MapAnnotation *anno_library = [[MapAnnotation alloc] initWithCoordinate:anno_lib andTile:@"图书馆" andTheSubtitle:@"同济大学"];
-    anno_library.pinColor = MKPinAnnotationColorGreen;
-    [self.mapview addAnnotation:anno_library];
+//    CLLocationCoordinate2D anno_lib = CLLocationCoordinate2DMake(31.286659, 121.211983);
+//    MapAnnotation *anno_library = [[MapAnnotation alloc] initWithCoordinate:anno_lib andTile:@"图书馆" andTheSubtitle:@"同济大学"];
+//    anno_library.pinColor = [UIColor redColor];
+//    [self.mapview addAnnotation:anno_library];
     
+    CLLocationCoordinate2D loc_lib =CLLocationCoordinate2DMake(31.286659, 121.211983);
+    AuthorityAnnotation *anno_lib = [[AuthorityAnnotation alloc] initWithCoordinate:loc_lib andTile:@"图书馆" andTheSubtitle:@"同济大学"];
+    [self.mapview addAnnotation:anno_lib];
+    
+    CLLocationCoordinate2D loc_basketball =CLLocationCoordinate2DMake(31.287509, 121.214768);
+    AuthorityAnnotation *anno_basketball = [[AuthorityAnnotation alloc] initWithCoordinate:loc_basketball andTile:@"篮球场" andTheSubtitle:@"同济大学"];
+    [self.mapview addAnnotation:anno_basketball];
 }
 
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+     //由于当前位置的标注也是一个大头针，所以此时需要判断，此代理方法返回nil使用默认大头针视图
+    if ([annotation isKindOfClass:[AuthorityAnnotation class]]) {
+        static NSString  * key1 = @"Annotation";
+        MKAnnotationView * annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:key1];
+        if (!annotationView) {
+            annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:key1];
+            annotationView.canShowCallout = true;              //允许交互点击
+//            annotationView.calloutOffset = CGPointMake(0, 0);  //定义详情视图偏移量
+            annotationView.leftCalloutAccessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@""]];
+        }
+        annotationView.annotation = annotation;
+        if ([annotation.title isEqualToString:@"图书馆"])//设置大头针视图的图片
+        {
+            annotationView.image = [UIImage imageNamed:@"img_lib.png"];
+        }
+        if ([annotation.title isEqualToString:@"篮球场"])//设置大头针视图的图片
+        {
+            annotationView.image = [UIImage imageNamed:@"img_basketball.png"];
+        }
+        
+        
+        // 侧边按钮
+        UIButton *rightButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 80, 50)];
+        rightButton.backgroundColor = [UIColor grayColor];
+        [rightButton setTitle:@"查看详情" forState:UIControlStateNormal];
+        annotationView.rightCalloutAccessoryView = rightButton;
+        
+        return annotationView;
+    }else{
+        return nil;
+    }
+}
+
+
+-(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
+    if([view.annotation.title isEqualToString:@"图书馆"])
+    {
+        NSLog(@"点击了查看图书馆详情");
+        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UIViewController * LibDetailVC = [[UIViewController alloc] init];
+        //根据storyboard创建控制对象
+        LibDetailVC = [storyboard instantiateViewControllerWithIdentifier:@"LibDetailVC"];
+        [self.navigationController showDetailViewController:LibDetailVC sender:nil];
+    }
+    if([view.annotation.title isEqualToString:@"篮球场"])
+    {
+        NSLog(@"点击了查看篮球场详情");
+    }
+    
+}
 
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id<MKOverlay>)overlay
 {
