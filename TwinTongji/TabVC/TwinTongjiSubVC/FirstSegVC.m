@@ -138,6 +138,14 @@
     CLLocationCoordinate2D loc_basketball =CLLocationCoordinate2DMake(31.287509, 121.214768);
     AuthorityAnnotation *anno_basketball = [[AuthorityAnnotation alloc] initWithCoordinate:loc_basketball andTile:@"篮球场" andTheSubtitle:@"同济大学"];
     [self.mapview addAnnotation:anno_basketball];
+    
+    CLLocationCoordinate2D loc_large_canteen =CLLocationCoordinate2DMake(31.287437, 121.217044);
+    AuthorityAnnotation *anno_large_canteen = [[AuthorityAnnotation alloc] initWithCoordinate:loc_large_canteen andTile:@"大食堂" andTheSubtitle:@"同济大学"];
+    [self.mapview addAnnotation:anno_large_canteen];
+    
+    CLLocationCoordinate2D loc_small_canteen =CLLocationCoordinate2DMake(31.287520, 121.217854);
+    AuthorityAnnotation *anno_small_canteen = [[AuthorityAnnotation alloc] initWithCoordinate:loc_small_canteen andTile:@"小食堂" andTheSubtitle:@"同济大学"];
+    [self.mapview addAnnotation:anno_small_canteen];
 }
 
 
@@ -161,6 +169,10 @@
         if ([annotation.title isEqualToString:@"篮球场"])//设置大头针视图的图片
         {
             annotationView.image = [UIImage imageNamed:@"img_basketball.png"];
+        }
+        if ([annotation.title isEqualToString:@"大食堂"] || [annotation.title isEqualToString:@"小食堂"])//设置大头针视图的图片
+        {
+            annotationView.image = [UIImage imageNamed:@"img_canteen.png"];
         }
         
         
