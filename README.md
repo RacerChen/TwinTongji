@@ -1,2 +1,2 @@
 # TwinTongji
-[app_img]('./ios_app.png')
+![app_img]('./ios_app.png')
