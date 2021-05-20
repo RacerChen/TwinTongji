@@ -1,2 +1,2 @@
 # TwinTongji
-![app_img]('./ios_app.png')
+![app_img]('https://github.com/RacerChen/TwinTongji/blob/main/ios_app.png')
